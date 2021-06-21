@@ -1,7 +1,7 @@
 # [Songs_Smarter](https://songs-smarter.herokuapp.com)
 
 
-## Songs Smarter? Huh?
+## [....IN PROGRESS....]
   * INSERT SITE PURPOSE INFO HERE
 
   * [Features](https://github.com/brancifortnick/Songs_Smarter/wiki/features)
