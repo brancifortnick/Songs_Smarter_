@@ -14,7 +14,7 @@ function App() {
 
   return isLoaded && (
     <Switch>
-      <Route path="/login">
+      <Route path="/">
         <LoginFormPage />
       </Route>
       <Route path="/signup">

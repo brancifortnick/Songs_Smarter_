@@ -11,9 +11,9 @@ export default function LoginFormPage() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return (
-    <Redirect to="/" />
-  );
+  // if (sessionUser) return (
+  //   <Redirect to="/" />
+  // );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,8 +33,8 @@ export default function LoginFormPage() {
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>
             </div>
-            <div className={styles.inputdiv}>            
-                <input 
+            <div className={styles.inputdiv}>
+                <input
                 className={styles.input}
                 type="text"
                 placeholder="Username or Email"
@@ -44,7 +44,7 @@ export default function LoginFormPage() {
                 />
             </div>
             <div className={styles.inputdiv}>
-                <input 
+                <input
                 className={styles.input}
                 type="password"
                 placeholder="Password"
@@ -63,4 +63,3 @@ export default function LoginFormPage() {
     </div>
   );
 }
-
