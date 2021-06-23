@@ -1,4 +1,3 @@
-![updated version0621]
 # [Songs_Smarter](https://songs-smarter.herokuapp.com)
 
 
