@@ -5,12 +5,30 @@ const csurf = require('csurf');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const routes = require('./routes');
+const fileUpload = require('express-fileupLoad') //!!!!!!!!!!!!!/
 
 
 const { environment } = require('./config');
 const isProduction = environment === 'production';
 
 const app = express();
+
+//******************************* */
+app.use(fileUpload())
+app.post('/upload', (req, res)=> {
+  if(req.files === null){
+    return res.status(400).json({ msg: "No File Uploaded"})
+  }
+  const file = req.files.file;
+
+  file.mv(`${__dirname}/backend/public/uploads/${file.name}`, err => {
+    if(err)console.error(err);
+    return res.status(500).send(err)
+  })
+  res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+});
+//***************************************** */
+
 
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -27,10 +45,10 @@ app.use(
             secure: isProduction,
             sameSite: isProduction && "Lax",
             httpOnly: true,
-            
+
         },
     })
-);  
+);
 app.use(routes);
 
 app.use((_req, _res, next) => {
