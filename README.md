@@ -6,7 +6,7 @@
   * INSERT SITE PURPOSE INFO HERE
 
   * [Features](https://github.com/brancifortnick/Songs_Smarter_/wiki/features)
-  * [Frontend-Routes](https://github.com/brancifortnick/Songs_Smarter_/wikiFrontend-Routes)
+  * [Frontend-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/Frontend-Routes)
   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation)
 
 ### Database Schema
