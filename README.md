@@ -1,3 +1,4 @@
+![updated version0621]
 # [Songs_Smarter](https://songs-smarter.herokuapp.com)
 
 
@@ -9,7 +10,7 @@
   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter/wiki/API-Documentation)
 
 ### Database Schema
-  * ![Schema](https://user-images.githubusercontent.com/65651149/122676891-f7179f80-d1ad-11eb-807a-db8d9171544a.jpg)
+  * ![Schema](https://user-images.githubusercontent.com/65651149/123163450-ba62d700-d43f-11eb-824c-677522cb2693.png)
 
 ### My Stems
   * ![myStems Page]()
