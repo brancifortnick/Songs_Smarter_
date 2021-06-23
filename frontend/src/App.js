@@ -7,8 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-
-
+import LoginFormModal from './components/LoginFormModal';
 
 function App() {
   const dispatch = useDispatch();
