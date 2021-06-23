@@ -1,7 +1,7 @@
-import { csrfFetch } from './csrf';
+import { csrfFetch } from "./csrf";
 
-const SET_USER = 'session/setUser';
-const REMOVE_USER = 'session/removeUser';
+const SET_USER = "session/setUser";
+const REMOVE_USER = "session/removeUser";
 
 const setUser = (user) => {
   return {
@@ -10,11 +10,14 @@ const setUser = (user) => {
   };
 };
 
-// const removeUser = () => {
-//   return {
-//     type: REMOVE_USER,
-//   };
-// };
+const removeUser = () => {
+  return {
+    type: REMOVE_USER,
+  };
+};
+
+//*   sign-up     //
+
 export const signup = (user) => async (dispatch) => {
   const { username, email, password } = user;
   const response = await csrfFetch("/api/users", {
@@ -30,10 +33,12 @@ export const signup = (user) => async (dispatch) => {
   return response;
 };
 
+//*    login    //
+
 export const login = (user) => async (dispatch) => {
   const { credential, password } = user;
-  const response = await csrfFetch('/api/session', {
-    method: 'POST',
+  const response = await csrfFetch("/api/session", {
+    method: "POST",
     body: JSON.stringify({
       credential,
       password,
@@ -45,13 +50,6 @@ export const login = (user) => async (dispatch) => {
 };
 
 const initialState = { user: null };
-
-export const restoreUser = () => async dispatch => {
-  const response = await csrfFetch('/api/session');
-  const data = await response.json();
-  dispatch(setUser(data.user));
-  return response;
-};
 
 const sessionReducer = (state = initialState, action) => {
   let newState;
@@ -68,5 +66,24 @@ const sessionReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export const restoreUser = () => async (dispatch) => {
+  const response = await csrfFetch("/api/session");
+  const data = await response.json();
+  dispatch(setUser(data.user));
+  return response;
+};
+
+//*   log-out   //
+
+export const logout = () => async (dispatch) => {
+  const response = await csrfFetch("/api/session", {
+    method: "DELETE",
+  });
+  dispatch(removeUser());
+  return response;
+};
+
+//?    testinBrowser    window.store.dispatch(window.sessionActions.logout());
 
 export default sessionReducer;
