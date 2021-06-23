@@ -5,7 +5,7 @@
     max-height: 750px;
     padding: 15px;
     padding-bottom: 50px;
-    border: 5px solid purple;
+    border: 5px solid black;
     border-bottom-right-radius: 4rem;
     position: absolute;
     left: 100px;
@@ -19,9 +19,9 @@
     height: 35px;
     /* justify-content: space-between; */
     margin: 18px;
-  
+
     box-shadow: royalblue;
-    
+
 }
 .input {
     border: 3px ridge purple;
@@ -41,12 +41,12 @@
     font-weight: bold;
     color:slateblue;
     text-align: center;
-    
+
 }
 
 .checkbox {
     word-wrap: normal;
-    
+
 }
 
 .forgot {
@@ -58,5 +58,5 @@
 
 .remember {
     display: inline-flex;
-    position: relevative;
+    position: relative;
 }

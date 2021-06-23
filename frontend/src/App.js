@@ -7,7 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-
+import UploadPage from './pages/AudioUpload';
 
 
 function App() {
@@ -33,6 +33,9 @@ function App() {
           </Route>
           <Route path='/songs'>
             <AllSongs />
+          </Route>
+          <Route path='/upload'>
+            <AudioFile />
           </Route>
         </Switch>
       )}

@@ -13,8 +13,12 @@ function Navigation({ isLoaded }) {
   } else {
     sessionLinks = (
       <>
+
         <NavLink to="/login">Log In</NavLink>
+         {' '} | {' '}
         <NavLink to="/signup">Sign Up</NavLink>
+         {' '}
+
       </>
     );
   }
@@ -22,9 +26,8 @@ function Navigation({ isLoaded }) {
   return (
     <ul>
       <li>
-        <NavLink exact to="/">
-          Home
-        </NavLink>
+        <NavLink exact to="/">Home</NavLink>
+        {' '} | {' '}
         {isLoaded && sessionLinks}
       </li>
     </ul>
