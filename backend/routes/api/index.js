@@ -27,16 +27,15 @@ router.get(
     restoreUser,
     (req, res) => {
         return res.json(req.user);
-    }
+        }
     );
-    
+
     router.get(
         '/require-auth',
         requireAuth,
         (req, res) => {
             return res.json(req.user);
-        }
+            }
         );
-        
+
 module.exports = router;
-        

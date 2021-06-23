@@ -20,7 +20,7 @@ const getSongs = (songs) => ({
 
 
 
-//*Thunks
+//*Thunks---can not console log inside of thunks*//
 
 export const getAllSongs = () => async(dispatch)=> {
     const res = await csrfFetch('/api/song');
@@ -28,7 +28,7 @@ export const getAllSongs = () => async(dispatch)=> {
     if(res.ok){
         dispatch(getSongs(songs));
     }
-}
+};
 
 
 
