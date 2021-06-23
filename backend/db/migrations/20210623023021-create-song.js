@@ -9,23 +9,17 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       userId: {
-        unique: true,
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      myStemsId: {
-        unique: true,
         allowNull: false,
         type: Sequelize.INTEGER,
       },
       url: {
         unique: true,
         allowNull: false,
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(255),
       },
       title: {
         allowNull: false,
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(30),
       },
       createdAt: {
         allowNull: false,
