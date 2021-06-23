@@ -19,9 +19,9 @@
     height: 35px;
     /* justify-content: space-between; */
     margin: 18px;
-  
+
     box-shadow: royalblue;
-    
+
 }
 .input {
     border: 3px ridge purple;
@@ -41,12 +41,12 @@
     font-weight: bold;
     color:slateblue;
     text-align: center;
-    
+
 }
 
 .checkbox {
     word-wrap: normal;
-    
+
 }
 
 .forgot {
@@ -58,5 +58,5 @@
 
 .remember {
     display: inline-flex;
-    position: relevative;
+    position: relative;
 }
