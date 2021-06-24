@@ -6,17 +6,26 @@ import { useSelector, useDispatch } from "react-redux";
 
 const AllSongs = () => {
     const dispatch = useDispatch();
-    const songs = useSelector(state=> Object.values(state.songs))
+    // const {id} = useParams();
 
+    const songs = useSelector(state => Object.values(state.songs))
+    console.log(songs, "___________________________________________")
     useEffect(()=> {
         dispatch(getAllSongs())
     },[dispatch])
 
-    return(
-        <div>
-            <h2>{songs.userId}</h2>
-        </div>
-    )
+
+
+    return (
+      <div>
+        <ul>
+          {songs.map((song) => (
+            <ul key={song.id}>{song.title}</ul>
+          ))}
+          hi
+        </ul>
+      </div>
+    );
 };
 
 export default AllSongs;

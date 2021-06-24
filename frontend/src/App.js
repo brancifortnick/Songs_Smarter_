@@ -7,7 +7,8 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-import LoginFormModal from './components/LoginFormModal';
+import Player from "./components/AudioPlayer";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Player />
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
@@ -30,7 +32,7 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path='/songs'>
+          <Route path="/song">
             <AllSongs />
           </Route>
         </Switch>

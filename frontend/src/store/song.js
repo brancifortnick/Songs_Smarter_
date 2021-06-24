@@ -15,7 +15,7 @@ const GET_SONGS = 'songs/GET_SONGS'; //!case
 
 const getSongs = (songs) => ({
     type: GET_SONGS,
-    songs,
+    songs, //!<====payload
 });
 
 
@@ -24,9 +24,9 @@ const getSongs = (songs) => ({
 
 export const getAllSongs = () => async(dispatch)=> {
     const res = await csrfFetch('/api/song');
-    const songs = await res.json();
+    const data = await res.json();
     if(res.ok){
-        dispatch(getSongs(songs));
+        dispatch(getSongs(data));
     }
 };
 
@@ -39,11 +39,12 @@ const initialState = {};
 const songsReducer = (state = initialState, action) => {
     switch(action.type){
         case GET_SONGS: {
-            const newSongs = {...state};
-            action.songs.forEach((song)=> {
-                newSongs[song.id] = song;
+            const allSongs = {...state};
+              action.songs.forEach((song)=> {
+                allSongs[song.id] = song;
             })
-            return newSongs;
+            console.log(allSongs, "###########----from reducer")
+            return allSongs;
         }
         default:
             return state;
