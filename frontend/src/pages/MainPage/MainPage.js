@@ -6,7 +6,7 @@ import UsersContainer from "../../components/UsersContainer";
 const MainPage = () => {
   return (
     <div>
-      <h2 className={styles.heading}>Search for Users</h2>
+      <h2 className={styles.heading}>'Search for Artists'</h2>
       <SearchBar />
       <UsersContainer />
 

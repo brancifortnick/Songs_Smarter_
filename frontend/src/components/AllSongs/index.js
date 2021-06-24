@@ -14,7 +14,7 @@ const AllSongs = () => {
 
     return(
         <div>
-            <h2>This Worked</h2>
+            <h2>{songs.userId}</h2>
         </div>
     )
 };
