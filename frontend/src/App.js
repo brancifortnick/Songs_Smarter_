@@ -7,7 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-import Player from "./components/AudioPlayer";
+import UploadPage from './pages/AudioPage';
 
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
 
   return (
     <>
-      <Player />
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
@@ -32,8 +31,11 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/song">
+          <Route path='/song'>
             <AllSongs />
+          </Route>
+          <Route path='/upload'>
+            <AudioFile />
           </Route>
         </Switch>
       )}
