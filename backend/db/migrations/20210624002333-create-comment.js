@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Songs", {
+    return queryInterface.createTable("Comments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,16 +11,16 @@ module.exports = {
       userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model : 'Users'}
+        references: { model: "Users" },
       },
-      url: {
-        unique: true,
+      songId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: "Songs" },
+      },
+      body: {
         allowNull: false,
         type: Sequelize.STRING(255),
-      },
-      title: {
-        allowNull: false,
-        type: Sequelize.STRING(30),
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +35,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Songs');
+    return queryInterface.dropTable('Comments');
   }
 };
