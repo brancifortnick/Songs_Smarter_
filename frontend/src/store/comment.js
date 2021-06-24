@@ -6,7 +6,7 @@ import {csrfFetch} from './csrf';
 //*initial state//
 
 
-//*         action           *//
+//*         Constants           *//
 
 
 const GET = "comments/GET"
@@ -25,23 +25,23 @@ const get = (commentList) => ({
 });
 
 
-const create = addComment => ({
+const create = (addComment )=> ({
     type: CREATE,
     addComment,
 });
 
-const edit = commentEdit => ({
+const edit = (commentEdit) => ({
     type: EDIT,
     commentEdit
 });
 
-const remove = commentId => ({
+const remove = (commentId) => ({
     type: DELETE,
     commentId,
 });
 
 
-
+//!            thunks            //
 //*        get the comments      *//
 
 export const getComments = () => async(dispatch)=> {
@@ -96,10 +96,10 @@ export const editComment = (commentEdit, commentId, userId) => async (dispatch)=
 export const deleteComment = (commentId, userId ) => async(dispatch)=> {
     const data = await csrfFetch('api/comment', {
         method: "DELETE",
-        body: JSON.stringify({
-            commentId,
-            userId,
-        }),
+            body: JSON.stringify({
+                commentId,
+                userId,
+            }),
         headers: {
             'Content-Type': 'application/json',
         }

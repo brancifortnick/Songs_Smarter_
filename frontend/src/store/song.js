@@ -2,52 +2,138 @@ import { csrfFetch } from "./csrf";
 
 
 //*constants*//
-const GET_SONGS = 'songs/GET_SONGS'; //!case
+const GET_SONGS = 'songs/GET_SONGS';
+const ADD_SONG = 'songs/ADD_SONG';
+const UPDATE_SONG = 'songs/UPDATE_SONG';
+const DELETE_SONG = 'comments/DELETE_SONG';
 
-
-// get1song
-// add1song
-// 1update
-// 1delete
-
-//*action creators
+//*           action-creators              *//
 
 
 const getSongs = (songs) => ({
     type: GET_SONGS,
-    songs, //!<====payload
+    songs,
+});
+
+const addSong = (song) => ({
+  type: ADD_SONG,
+  song,
+});
+
+const updateSong = (update) => ({
+    type: UPDATE_SONG,
+    update,
+});
+
+const removeSong = (remove) => ({
+  type: DELETE_SONG,
+  remove,
 });
 
 
+//*                Thunks---          *//
+//*          get all songs              *//
 
-//*Thunks---can not console log inside of thunks*//
 
 export const getAllSongs = () => async(dispatch)=> {
     const res = await csrfFetch('/api/song');
-    const data = await res.json();
+    // const data = await res.json();
     if(res.ok){
-        dispatch(getSongs(data));
+        const songs = await res.json()
+        dispatch(getSongs(songs));
     }
+};
+
+//*       add song                *//
+
+export const createSong = (song) => async(dispatch) => {
+    song = JSON.stringify(song)
+
+    const data = await csrfFetch('api/song', {
+        method: "POST",
+        body: song,
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    if(data.ok) {
+        const song = await res.json();
+        dispatch(addSong(song))
+    }
+};
+
+//*         edit a song         *//
+
+export const replaceSong = (update, remove, userId) => async (dispatch) => {
+    const data = JSON.stringify({
+      update,
+      remove,
+      userId,
+    });
+    const res = await csrfFetch("api/song", {
+      method: "PUT",
+      body: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (res.ok) {
+      const update = await res.json();
+      dispatch(updateSong(update));
+    }
+  };
+
+export const deleteSong = (remove, userId) => {
+    const data = await csrfFetch("api/song", {
+      method: "DELETE",
+        body: JSON.stringify({
+            remove,
+            userId,
+        }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+        if (data.ok) {
+            const remove = await res.json();
+                dispatch(removeSong(remove));
+        }
 };
 
 
 
-//*  initial state
+
+//*            initialState               *//
+
 const initialState = {};
-//*reducers
+
+//*         reducer          *//
 
 const songsReducer = (state = initialState, action) => {
     switch(action.type){
         case GET_SONGS: {
-            const allSongs = {...state};
-              action.songs.forEach((song)=> {
+            const allSongs = {};
+              action.songs.forEach(song => {
                 allSongs[song.id] = song;
             })
-            console.log(allSongs, "###########----from reducer")
-            return allSongs;
+                return allSongs;
+        };
+        case ADD_SONG: {
+            const newState = {...state}
+            newState[action.song] = action.song;
+                return newState
         }
-        default:
-            return state;
+        case UPDATE_SONG: {
+            const newState = {...state}
+            newState[action.song] = action.song;
+        }
+        case DELETE_SONG: {
+            const newState = {...state}
+            delete newState[action.remove]
+            return newState;
+        }
+            default:
+                return state;
     }
 };
 
