@@ -12,57 +12,58 @@ const comment = require( '../../db/models/comment' );
 //     return res.json(comment)
 // }));
 
-router.get('/', asyncHandler(async(req, res)=> {
-    const getComment = await Comment.findByPk(req.params.id, {
-        include:
-            {
-            model: Song,
-            include: User,
-        },
-    });
-    getComment ? res.json(getComment) : console.log('There are no comments for this song');
-}))
+// router.get('/:id', asyncHandler(async(req, res)=> {
+//     const getComment = await Comment.findByPk(req.params.id, {
+//         include:
+//             {
+//             model: Song,
+//             include: User,
+//         },
+//     });
+//     getComment ? res.json(getComment) : console.log('There are no comments for this song');
+// }))
 
 //???       ROUTE FIX    ????
-router.get('/', asyncHandler(async(req, res)=> {
+router.get('/all', asyncHandler(async(req, res)=> {
   //:id/comment
-  const getAllComments = await Comment.findAll({
-    where: {
-      songId: req.params.id,
-    },
-    include: User,
-  });
-  return res.json(getAllComments);
+  const comments = await Comment.findAll(
+    // where: {
+    //   songId: req.params.id,
+    // },
+    // include: User,
+);
+  console.log(comments, "________have i made it here______________")
+  return res.json(comments);
 }));
 
-//:id/comments
-router.post('/', requireAuth, asyncHandler(async(req, res)=> {
-    const userId = req.user.id;
-    const songId = req.params.id;
-    const { body } = req.body.comment;
-    const comment = await Comment.create({userId, songId, body});
-    const data = res.json(comment)
- return data;
-}))
+// //:id/comments
+// router.post('/', requireAuth, asyncHandler(async(req, res)=> {
+//     const userId = req.user.id;
+//     const songId = req.params.id;
+//     const { body } = req.body.comment;
+//     const comment = await Comment.create({userId, songId, body});
+//     const data = res.json(comment)
+//  return data;
+// }))
 
-//:id/comments/:songId
-router.put('/', requireAuth, asyncHandler(async(req, res)=> {
-    const commentId= req.params.songId;
-    const { body } = req.body;
+// //:id/comments/:songId
+// router.put('/', requireAuth, asyncHandler(async(req, res)=> {
+//     const commentId= req.params.songId;
+//     const { body } = req.body;
 
-    const updateComment = await Comment.findByPk(commentId)
-    comment.update({
-        body,
-    })
-    return res.json({Success: "Updated"})
-}));
+//     const updateComment = await Comment.findByPk(commentId)
+//     comment.update({
+//         body,
+//     })
+//     return res.json({Success: "Updated"})
+// }));
 
-//:id/comments/:songId
-router.delete('/', requireAuth, asyncHandler(async(req, res)=> {
-    const commentId = req.params.songId;
-    const deleteComment = await Comment.findByPk(commentId);
-        await deleteComment.destroy();
-    return res.json({Success: "Comment Deleted"})
-}))
+// //:id/comments/:songId
+// router.delete('/', requireAuth, asyncHandler(async(req, res)=> {
+//     const commentId = req.params.songId;
+//     const deleteComment = await Comment.findByPk(commentId);
+//         await deleteComment.destroy();
+//     return res.json({Success: "Comment Deleted"})
+// }))
 
 module.exports = router;

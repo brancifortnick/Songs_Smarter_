@@ -7,9 +7,9 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-import UploadPage from './pages/AudioPage';
-
-
+// import Player from './components/AudioPlayer';
+import Upload from './components/Upload';
+import AllComments from "./components/AllComments";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,7 +35,10 @@ function App() {
             <AllSongs />
           </Route>
           <Route path='/upload'>
-            <AudioFile />
+            <Upload />
+          </Route>
+          <Route path='/comments'>
+            <AllComments />
           </Route>
         </Switch>
       )}

@@ -1,6 +1,6 @@
 import { getAllSongs } from "../../store/song";
 import React, { useEffect } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { useHistory } from 'react-router'
 import { useSelector, useDispatch } from "react-redux";
 
 
@@ -8,8 +8,8 @@ const AllSongs = () => {
     const dispatch = useDispatch();
     // const {id} = useParams();
 
-    const songs = useSelector(state => Object.values(state.songs))
-    console.log(songs, "___________________________________________")
+    const songs = useSelector(state => Object.values(state.song))
+    console.log(songs)
     useEffect(()=> {
         dispatch(getAllSongs())
     },[dispatch])
