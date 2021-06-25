@@ -1,8 +1,17 @@
 
 @import-normalize;
 
+/* @media screen {
+  max-width-600px;
+} */
 html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url(./assets/neonVibe.jpeg);
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-y: hidden;
+}
+* {
+  margin: 0;
 }

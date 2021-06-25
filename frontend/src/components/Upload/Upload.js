@@ -24,7 +24,7 @@ const Upload = () => {
           url,
           userId,
         }
-      const addedSong = await dispatch(createSong(song));
+      const addedSong = await dispatch(createSong(song));//!createSong
       if(addedSong)
        return history.push(`/songs/${addedSong.id}`) //? go to song page
     }

@@ -2,7 +2,7 @@ import { getAllSongs } from "../../store/song";
 import React, { useEffect } from "react";
 import { useHistory } from 'react-router'
 import { useSelector, useDispatch } from "react-redux";
-
+import './AllSongs.css'
 
 const AllSongs = () => {
     const dispatch = useDispatch();
