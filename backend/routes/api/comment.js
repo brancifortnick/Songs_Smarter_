@@ -3,7 +3,7 @@ const { requireAuth } = require('../../utils/auth')
 const router = express.Router();
 const asyncHandler = require('express-async-handler')
 const { Song , Comment, User } = require("../../db/models");
-const comment = require( '../../db/models/comment' );
+
 
 
 //*route location???????
@@ -25,19 +25,13 @@ const comment = require( '../../db/models/comment' );
 
 //???       ROUTE FIX    ????
 router.get('/all', asyncHandler(async(req, res)=> {
-  //:id/comment
   const comments = await Comment.findAll(
-    // where: {
-    //   songId: req.params.id,
-    // },
-    // include: User,
-);
-  console.log(comments, "________have i made it here______________")
+    );
   return res.json(comments);
 }));
 
 // //:id/comments
-// router.post('/', requireAuth, asyncHandler(async(req, res)=> {
+// router.post('/:id/comment', requireAuth, asyncHandler(async(req, res)=> {
 //     const userId = req.user.id;
 //     const songId = req.params.id;
 //     const { body } = req.body.comment;
@@ -46,19 +40,18 @@ router.get('/all', asyncHandler(async(req, res)=> {
 //  return data;
 // }))
 
-// //:id/comments/:songId
-// router.put('/', requireAuth, asyncHandler(async(req, res)=> {
-//     const commentId= req.params.songId;
+// router.put('/:id/comment/:songId', requireAuth, asyncHandler(async(req, res)=> {
+//     const commentId = req.params.songId;
 //     const { body } = req.body;
 
 //     const updateComment = await Comment.findByPk(commentId)
-//     comment.update({
+//     updateComment.update({
 //         body,
 //     })
 //     return res.json({Success: "Updated"})
 // }));
 
-// //:id/comments/:songId
+// // //:id/comments/:songId
 // router.delete('/', requireAuth, asyncHandler(async(req, res)=> {
 //     const commentId = req.params.songId;
 //     const deleteComment = await Comment.findByPk(commentId);

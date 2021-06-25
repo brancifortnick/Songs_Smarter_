@@ -47,15 +47,16 @@ export const getAllSongs = () => async(dispatch)=> {
 //*       add song                *//
 
 export const createSong = (song) => async(dispatch) => {
-    song = JSON.stringify(song)
-
-    const res = await csrfFetch('api/song', {
+  const {userId, title, link, artist} = song;
+     console.log(song)
+    const res = await csrfFetch('api/songs', {
         method: "POST",
-        body: song,
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify({userId, title, link, artist})
     });
+
     if(res.ok) {
         const song = await res.json();
         dispatch(addSong(song))
@@ -70,7 +71,7 @@ export const replaceSong = (update, remove, userId) => async (dispatch) => {
       remove,
       userId,
     });
-    const res = await csrfFetch("api/song", {
+    const res = await csrfFetch("api/song/add", {
       method: "PUT",
       body: data,
       headers: {

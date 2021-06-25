@@ -9,13 +9,23 @@ const { handlerValidationErrors } = require('../../utils/validation');
 
 
 router.get('/', asyncHandler(async(req, res)=> {
-
     const allSongs = await Song.findAll();
        console.log(allSongs)
       return res.json(allSongs);
 
 }))
 
+router.post('/', asyncHandler(async(req, res)=> {
+    const {userId, title, link, artist} = req.body;
+    const song = await Song.create({
+        userId,
+        title,
+        url: link,
+        artist
+     })
+    return res.json(song)
+
+}))
 
 
 
