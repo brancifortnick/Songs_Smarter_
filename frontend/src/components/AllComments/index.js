@@ -1,30 +1,46 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useHistory } from "react"
 import { useSelector, useDispatch} from "react-redux"
-import { getComments } from '../../store/comment';
+import { getComments, createComment} from '../../store/comment';
 
-const AllComments = () => {
-
+const AllComments = (songId) => {
 
     const dispatch = useDispatch();
-
+    // const history = useHistory()
     const comments = useSelector(state=> Object.values(state.comment))
+    console.log('state', comments)
+
 
     useEffect(()=> {
 
-        dispatch(getComments(comments))
+        dispatch(getComments())
     },[dispatch])
+
+
+    // const onSubmit = (e) => {
+    //   e.preventDefault()
+    // }
+
+    const addComment = event => {
+      const formText = event.target.value
+      dispatch(getComments(songId, formText))
+    }
+
+
 
     return (
       <div>
-        this is comment
-        <ol>
-            <h2>Comments</h2>
-          {comments.map((comment) => (
-            <div key={comment.id}>
+          <h2>Comments</h2>
+          <form onSubmit={addComment}>
+            <textarea />
+          </form>
+          <ul>
+            {comments.map(comment => (
+              <li key={comment.id}>
                 {comment.body}
-            </div>
-          ))}
-        </ol>
+              </li>
+            ))}
+          </ul>
+          <button type='submit'>Submit</button>
       </div>
     );
 

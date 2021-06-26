@@ -5,11 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import './AllSongs.css'
     // const {id} = useParams();
 const AllSongs = () => {
-
-
     const dispatch = useDispatch();
-
-
     const songs = useSelector(state => Object.values(state.song))
 
 
@@ -21,12 +17,13 @@ const AllSongs = () => {
 
 
     return (
-      <div>
+      <div id="songsContainer">
         <ul>
           {songs.map((song) => (
-            <ul key={song.id}>{song.title}</ul>
+            <li key={song.id}>
+              {song.title}
+            </li>
           ))}
-          hi
         </ul>
       </div>
     );

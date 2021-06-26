@@ -25,20 +25,20 @@ const get = (comments) => ({
 });
 
 
-// const create = (addComment )=> ({
-//     type: CREATE_COMMENT,
-//     payload: addComment,
-// });
+const create = (addComment )=> ({
+    type: CREATE_COMMENT,
+    payload: addComment,
+});
 
-// const edit = (commentEdit) => ({
-//     type: EDIT_DELETE,
-//     payload: commentEdit
-// });
+const edit = (commentEdit) => ({
+    type: EDIT_COMMENT,
+    payload: commentEdit
+});
 
-// const remove = (commentId) => ({
-//     type: DELETE_COMMENT,
-//     payload: commentId,
-// });
+const remove = (commentId) => ({
+    type: DELETE_COMMENT,
+    payload: commentId,
+});
 
 
 //*            thunks            *//
@@ -52,24 +52,25 @@ export const getComments = () => async(dispatch)=> {
     }
 }
 
+
 //*        add/create comment                *//
 
-// export const createComment = (addComment) => async(dispatch) => {
-//     addComment = JSON.stringify(addComment);
+export const createComment = (addComment) => async(dispatch) => {
+    addComment = JSON.stringify(addComment);
 
-//     const res = await csrfFetch('api/comment',{
-//         method: "POST",
-//         body: addComment,
-//         headers: {
-//             "Content-Type": "application/json",
-//         }
-//     });
+    const res = await csrfFetch('api/comment/:id',{
+        method: "POST",
+        body: addComment,
+        headers: {
+            "Content-Type": "application/json",
+        }
+    });
 
-//        if(res.ok) {
-//         const comment = await res.json();
-//            dispatch(create(comment))
-//        }
-//     };
+       if(res.ok) {
+        const comment = await res.json();
+           dispatch(create(comment))
+       }
+    };
 
 // //*         edit              *//
 
@@ -127,21 +128,21 @@ const commentReducer = (state = initialState, action) => {
             })
             return allComments;
         };
-        // case CREATE_COMMENT: {
-        //     const newState = {...state}
-        //     newState[action.addComment] = action.addComment;
-        //     return newState
-        // }
-        // case EDIT_COMMENT: {
-        //     const newState = {...state}
-        //     newState[action.payload] = action.payload;
-        //     return newState;
-        // }
-        // case DELETE_COMMENT: {
-        //     const newState = {...state}
-        //     delete newState[action.commentId]
-        //     return newState;
-        // }
+        case CREATE_COMMENT: {
+            const newState = {...state}
+            newState[action.addComment] = action.addComment;
+            return newState
+        }
+        case EDIT_COMMENT: {
+            const newState = {...state}
+            newState[action.payload] = action.payload;
+            return newState;
+        }
+        case DELETE_COMMENT: {
+            const newState = {...state}
+            delete newState[action.commentId]
+            return newState;
+        }
         default:
             return state;
     }

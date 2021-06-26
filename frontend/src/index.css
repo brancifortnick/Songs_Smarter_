@@ -4,14 +4,28 @@
 /* @media screen {
   max-width-600px;
 } */
-html {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* html {
+
   background-image: url(./assets/neonVibe.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  overflow-y: hidden;
-}
+
+} */
 * {
   margin: 0;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
