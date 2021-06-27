@@ -8,9 +8,6 @@ const MainPage = () => {
     <div className={styles.mainPageContainer}>
       <h2 className={styles.heading}>'Search for Artists'</h2>
       <SearchBar />
-      <UsersContainer />
-      <SongForm />
-      <AllSongs />
     </div>
   );
 };

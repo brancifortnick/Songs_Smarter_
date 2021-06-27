@@ -4,23 +4,32 @@ import { useDispatch, useSelector } from "react-redux";
 import AllComments from "../AllComments";
 import { getOneSong } from '../../store/song';
 import DeleteSong from "../DeleteSong";
+import  "./SingleSong.css";
+
 //! import edit update and delete components//
 
 const SingleSong = () => {
     const dispatch = useDispatch();
-    const song = useSelector(state => state.song);
+    const { id } = useParams()
+    const song = useSelector(state => Object.values(state.song));
     console.log(song,'_____________________________')
+
+    // const blue = songs.filter((song)=> {
+    //     if(song.id === id)
+    //     return song;
+    // })
     useEffect(()=> {
 
-        dispatch(getOneSong(song))
-    },[dispatch, song])
+        dispatch(getOneSong(Number(id)))
+    },[dispatch, id])
 
         return (
-          <div><h1>
-            {song.title}
-           </h1>
-            <DeleteSong />
-            <AllComments />
+          <div>
+            <div id='single-song'>
+              <h1>{song[0].title}</h1>
+              <DeleteSong />
+              <AllComments />
+            </div>
           </div>
         );
 

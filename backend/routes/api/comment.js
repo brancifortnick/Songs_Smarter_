@@ -32,7 +32,7 @@ router.get('/all', asyncHandler(async(req, res)=> {
 
 // //:id/comments
 router.post(
-  "/",
+  "/create",
   requireAuth,
   asyncHandler(async (req, res) => {
     const { userId, songId, body} = req.body;
@@ -41,7 +41,7 @@ router.post(
       songId,
       body,
     });
-    return res.json(comment);
+    return res.json({comment});
   })
 );
 

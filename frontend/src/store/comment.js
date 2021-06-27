@@ -9,19 +9,19 @@ import {csrfFetch} from './csrf';
 //*         Constants           *//
 
 
-const GET_COMMENT = "comments/GET_COMMENT"
-const CREATE_COMMENT = 'comments/CREATE_COMMENT';
-const EDIT_COMMENT = 'comments/EDIT_COMMENT';
-const DELETE_COMMENT = 'comments/DELETE_COMMENT';
+const GET_COMMENT = "comment/GET_COMMENT"
+const CREATE_COMMENT = 'comment/CREATE_COMMENT';
+const EDIT_COMMENT = 'comment/EDIT_COMMENT';
+const DELETE_COMMENT = 'comment/DELETE_COMMENT';
 
 
 
 //*           action-creators              *//
 
 
-const get = (comments) => ({
+const get = (comment) => ({
   type: GET_COMMENT,
-  payload: comments,
+  payload: comment,
 });
 
 
@@ -55,12 +55,12 @@ export const getComments = () => async(dispatch)=> {
 
 //*        add/create comment                *//
 
-export const createComment = (addComment) => async(dispatch) => {
-    addComment = JSON.stringify(addComment);
+export const createComment = (comment) => async(dispatch) => {
 
-    const res = await csrfFetch('api/comment/:id',{
+
+    const res = await csrfFetch('api/comment/create',{
         method: "POST",
-        body: addComment,
+        body: JSON.stringify(comment),
         headers: {
             "Content-Type": "application/json",
         }
@@ -130,18 +130,18 @@ const commentReducer = (state = initialState, action) => {
         };
         case CREATE_COMMENT: {
             const newState = {...state}
-            newState[action.addComment] = action.addComment;
+            newState[action.comment] = action.comment;
             return newState
-        }
-        case EDIT_COMMENT: {
-            const newState = {...state}
-            newState[action.payload] = action.payload;
-            return newState;
-        }
-        case DELETE_COMMENT: {
-            const newState = {...state}
-            delete newState[action.commentId]
-            return newState;
+        // }
+        // case EDIT_COMMENT: {
+        //     const newState = {...state}
+        //     newState[action.payload] = action.payload;
+        //     return newState;
+        // }
+        // case DELETE_COMMENT: {
+        //     const newState = {...state}
+        //     delete newState[action.commentId]
+        //     return newState;
         }
         default:
             return state;
