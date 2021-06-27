@@ -25,7 +25,7 @@ router.get('/:id', asyncHandler(async(req, res)=>{
     }
 }))
 
-router.post('/', asyncHandler, (async(req, res)=> {
+router.post('/create', asyncHandler(async(req, res)=> {
     console.log("________inapi_______________")
     const {userId, title, link, artist} = req.body;
     const song = await Song.create({

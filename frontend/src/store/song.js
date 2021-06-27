@@ -63,10 +63,10 @@ export const getAllSongs = () => async(dispatch)=> {
 export const createSong = (song) => async(dispatch) => {
   const {userId, title, link, artist} = song;
      console.log('__________instore__________',song)
-    const res = await csrfFetch('api/songs', {
+    const res = await csrfFetch('/api/songs/create', {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({userId, title, link, artist})
     });
