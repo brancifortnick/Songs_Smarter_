@@ -1,7 +1,8 @@
 import { useEffect, useState, useHistory } from "react"
 import { useSelector, useDispatch} from "react-redux"
 import { getComments} from '../../store/comment';
-import CommentDelete from '../CommentDelete'
+import DeleteComment from '../CommentDelete';
+
 const AllComments = () => {
 
     const dispatch = useDispatch();
@@ -39,6 +40,8 @@ const AllComments = () => {
           {comments.map(comment =>
             <li key={comment?.id}>
               {comment?.body}
+              {comment?.id}
+              <DeleteComment id={comment?.id} />
             </li>
           )}
         </ul>

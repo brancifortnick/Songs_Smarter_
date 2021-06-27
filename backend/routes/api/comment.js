@@ -58,8 +58,8 @@ router.post(
 // }));
 
 
-router.delete('/delete:id', requireAuth, asyncHandler(async(req, res)=> {
-    const commentId = req.params.id;
+router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {
+    const commentId = parseInt(req.params.id, 10)
     const deleteComment = await Comment.findByPk(commentId);
         await deleteComment.destroy();
     return res.json(deleteComment)

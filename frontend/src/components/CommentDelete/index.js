@@ -5,15 +5,14 @@ import './CommentDelete.css'
 
 
 
-const DeleteComment = () => {
+const DeleteComment = (id) => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { id } = useParams();
-
 
     const deleteEvent = async(e) => {
         e.preventDefault();
-        dispatch(deleteComment(Number(id)))
+        await dispatch(deleteComment(id))
+        console.log('deleted comment', id)
         history.push('/');
     }
 

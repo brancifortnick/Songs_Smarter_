@@ -37,7 +37,7 @@ const edit = (comment) => ({
 
 const remove = (id) => ({
     type: DELETE_COMMENT,
-    payload: id,
+     id,
 });
 
 
@@ -97,12 +97,15 @@ export const createComment = (comment) => async(dispatch) => {
 // //*     delete       *//
 
 export const deleteComment = (id) => async(dispatch)=> {
-    const res = await csrfFetch(`/api/comment/delete/${id}`, {
+    console.log(id.id, "_______idCommentThunk________________")
+    const res = await csrfFetch(`/api/comment/delete/${id.id}`, {
         method: "DELETE",
+        body: JSON.stringify({id})
+
     })
         if(res.ok){
-            const comment = await res.json();
-               dispatch(remove(comment[id]))
+            dispatch(remove(id))
+            return res;
         }
 };
 

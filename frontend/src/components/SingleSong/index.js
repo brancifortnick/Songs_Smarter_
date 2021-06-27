@@ -25,16 +25,13 @@ const SingleSong = () => {
     },[dispatch, id])
 
         return (
-          <div>
+          <div className='audio-photo'>
             <div id="single-song">
               {/* <h1>{song[0].title}</h1> */}
               <DeleteSong />
             </div>
-            <div id='outer-div'>
-                <DeleteComment />
-              <div>
-                <CommentCreate />
-              </div>
+            <div>
+              <CommentCreate />
             </div>
             <div>
               <AllComments />
