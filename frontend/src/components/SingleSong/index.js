@@ -9,18 +9,20 @@ import DeleteSong from "../DeleteSong";
 const SingleSong = () => {
     const dispatch = useDispatch();
     const song = useSelector(state => state.song);
-
+    console.log(song,'_____________________________')
     useEffect(()=> {
 
         dispatch(getOneSong(song))
     },[dispatch, song])
 
         return (
-            <div>
-                <DeleteSong />
-                <AllComments />
-            </div>
-        )
+          <div><h1>
+            {song.title}
+           </h1>
+            <DeleteSong />
+            <AllComments />
+          </div>
+        );
 
 }
 export default SingleSong;
