@@ -25,7 +25,7 @@ const get = (comment) => ({
 });
 
 
-const create = (comment )=> ({
+const create = (comment)=> ({
     type: CREATE_COMMENT,
     payload: comment,
 });
@@ -58,17 +58,18 @@ export const getComments = () => async(dispatch)=> {
 export const createComment = (comment) => async(dispatch) => {
 
 
-    const res = await csrfFetch('api/comment/create',{
-        method: "POST",
-        body: JSON.stringify(comment),
-        headers: {
-            "Content-Type": "application/json",
-        }
+    const res = await csrfFetch("/api/comment/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(comment)
     });
 
        if(res.ok) {
         const comment = await res.json();
            dispatch(create(comment))
+           return comment;
        }
     };
 
@@ -96,7 +97,7 @@ export const createComment = (comment) => async(dispatch) => {
 // //*     delete       *//
 
 export const deleteComment = (commentId, userId ) => async(dispatch)=> {
-    const res = await csrfFetch('api/comment', {
+    const res = await csrfFetch('/api/comment', {
         method: "DELETE",
             body: JSON.stringify({
                 commentId,

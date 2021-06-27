@@ -42,12 +42,10 @@ function App() {
             <SongForm />
             <Upload />
           </Route>
-          <Route path='/song'>
+          <Route path="/song">
             <AllSongs />
           </Route>
-          {/* <Route path='/comments'>
-            <AllComments />
-          </Route> */}
+
           {/* <Route path="/add-songs">
             <SongForm />
           </Route> */}

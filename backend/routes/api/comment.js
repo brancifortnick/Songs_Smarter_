@@ -24,9 +24,9 @@ const { Song , Comment, User } = require("../../db/models");
 router.get('/all', asyncHandler(async(req, res)=> {
 
   const comments = await Comment.findAll();
-  console.log({
-    ...comments
-  })
+  // console.log({
+  //   ...comments
+  // })
   return res.json(comments);
 }));
 
@@ -36,7 +36,7 @@ router.post(
   requireAuth,
   asyncHandler(async (req, res) => {
     const { userId, songId, body} = req.body;
-    const comment= await Song.create({
+    const comment = await Comment.create({
       userId,
       songId,
       body,
