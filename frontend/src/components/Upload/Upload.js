@@ -33,23 +33,22 @@ const Upload = () => {
     },[dispatch])
 
     return (
-      <form onSubmit={onSubmit}>
-        <div>
-          <input
-          name='song-link'
-          type="text"
-          value={fileUpload}
-          onChange={(e)=> setFileUpload(e.target.value)}
-          required
-          />
+      <div className="song-form-container">
+        <form onSubmit={onSubmit}>
+          <div>
+            <input
+              name="song-link"
+              type="text"
+              value={fileUpload}
+              onChange={(e) => setFileUpload(e.target.value)}
+              required
+            />
 
-          <input
-          type="file"
-          name="songUpload"></input>
-        </div>
-          <button type='submit'>Submit</button>
-
-      </form>
+            <input type="file" name="songUpload"></input>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     );
 }
 

@@ -1,3 +1,5 @@
+
+/*
 .formContainer {
     display: flex;
     justify-content: space-between;
@@ -15,14 +17,15 @@
 
 .inputdiv {
     display: flex;
-    /* width: 175px; */
+     width: 175px;
     height: 35px;
-    /* justify-content: space-between; */
+    /* justify-content: space-between;
     margin: 18px;
 
     box-shadow: rgb(193, 201, 224);
 
-}
+    }
+
 .input {
     border: 3px ridge rgb(93, 7, 93);
     border-radius: 1em;
@@ -60,3 +63,4 @@
     display: inline-flex;
     position: relative;
 }
+*/

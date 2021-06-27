@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useHistory, useParams} from 'react-router';
 import { deleteComment } from '../../store/comment';
+import './CommentDelete.css'
 
 
 
@@ -17,12 +18,14 @@ const DeleteComment = () => {
     }
 
     return (
-        <div>
-            <button onClick={deleteEvent}>
-                Delete Comment
-            </button>
+      <form className="deleteFormContainer">
+        <div className="delete-wrapper">
+          <button className="delete-comment" onClick={deleteEvent}>
+            Delete Comment
+          </button>
         </div>
-    )
+      </form>
+    );
 }
 
 export default DeleteComment;

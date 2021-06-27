@@ -6,7 +6,7 @@ import { getOneSong } from '../../store/song';
 import DeleteSong from "../DeleteSong";
 import CommentCreate from "../CommentCreate/CommentCreate";
 import  "./SingleSong.css";
-
+import DeleteComment from "../CommentDelete";
 //! import edit update and delete components//
 
 const SingleSong = () => {
@@ -29,10 +29,15 @@ const SingleSong = () => {
             <div id="single-song">
               {/* <h1>{song[0].title}</h1> */}
               <DeleteSong />
-              <CommentCreate />
+            </div>
+            <div id='outer-div'>
+                <DeleteComment />
               <div>
-                <AllComments />
+                <CommentCreate />
               </div>
+            </div>
+            <div>
+              <AllComments />
             </div>
           </div>
         );

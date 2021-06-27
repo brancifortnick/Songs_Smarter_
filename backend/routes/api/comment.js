@@ -57,8 +57,8 @@ router.post(
 //     return res.json({Success: "Updated"})
 // }));
 
-// // //:id/comments/:songId
-router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {
+
+router.delete('/delete:id', requireAuth, asyncHandler(async(req, res)=> {
     const commentId = req.params.id;
     const deleteComment = await Comment.findByPk(commentId);
         await deleteComment.destroy();

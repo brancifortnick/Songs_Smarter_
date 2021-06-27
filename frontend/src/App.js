@@ -12,7 +12,7 @@ import AllSongs from './components/AllSongs';
 import Upload from './components/Upload';
 import AllComments from "./components/AllComments";
 import SingleSong from './components/SingleSong';
-
+import CommentDelete from './components/CommentDelete'
 
 function App() {
   const dispatch = useDispatch();
@@ -40,12 +40,11 @@ function App() {
           </Route>
           <Route path="/upload">
             <SongForm />
-            <Upload />
+            {/* <Upload /> */}
           </Route>
           <Route path="/song">
             <AllSongs />
           </Route>
-
           {/* <Route path="/add-songs">
             <SongForm />
           </Route> */}

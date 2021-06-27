@@ -1,0 +1,11 @@
+.form-input-wrapper{
+    display: grid;
+    grid-template-areas: repeat(20% 1fr);
+    margin: 0;
+    padding: 2px;
+}
+
+/*
+.form-container{
+    margin: 0;
+} */

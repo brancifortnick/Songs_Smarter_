@@ -6,7 +6,7 @@ import AllSongs from "../../components/AllSongs";
 const MainPage = () => {
   return (
     <div className={styles.mainPageContainer}>
-      <h2 className={styles.heading}>'Search for Artists'</h2>
+      <h2 className={styles.heading}>FIX THIS TEXT</h2>
       <SearchBar />
     </div>
   );

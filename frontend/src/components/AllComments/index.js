@@ -8,7 +8,7 @@ const AllComments = () => {
     // const history = useHistory()
     const comments = useSelector(state=> Object.values(state.comment))
     // console.log('state', comments)
-  console.log(comments[0], "allComments__________________________________________________")
+  // console.log(comments[0], "allComments__________________________________________________")
 
     useEffect(()=> {
 
