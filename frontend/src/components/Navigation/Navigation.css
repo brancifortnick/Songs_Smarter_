@@ -1,18 +1,21 @@
 .nav-bar {
-    background-color: black;
+    background-color: whitesmoke;
+    font-size: medium;
+    font-weight: bold;
     display: flex;
     height: 30px;
     text-decoration: none;
     justify-content: space-around;
-    align-items: center;
+    text-align: center;
 }
 .profile-dropdown {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
-    background-color: white;
-    list-style: none;
+    background-color:gray;
+    list-style-position: inside;
+    overflow: scroll;
+    overflow-y: hidden;
     text-align: center;
     width: 100px;
     height: 50px;

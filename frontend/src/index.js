@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== "production") {
   window.csrfFetch = csrfFetch;
   window.store = store;
   window.sessionActions = sessionActions;
+
 }
 
 const Root = () => (
@@ -23,6 +24,7 @@ const Root = () => (
     <BrowserRouter>
       <App />
     </BrowserRouter>
+
   </Provider>
 );
 

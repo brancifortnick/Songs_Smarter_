@@ -22,7 +22,7 @@ const { Song , Comment, User } = require("../../db/models");
 
 //???       ROUTE FIX    ????
 router.get('/all', asyncHandler(async(req, res)=> {
-  console.log('')
+
   const comments = await Comment.findAll();
   console.log({
     ...comments
@@ -32,7 +32,7 @@ router.get('/all', asyncHandler(async(req, res)=> {
 
 // //:id/comments
 router.post(
-  "/all",
+  "/",
   requireAuth,
   asyncHandler(async (req, res) => {
     const { userId, songId, body} = req.body;
@@ -58,11 +58,11 @@ router.post(
 // }));
 
 // // //:id/comments/:songId
-// router.delete('/', requireAuth, asyncHandler(async(req, res)=> {
-//     const commentId = req.params.songId;
-//     const deleteComment = await Comment.findByPk(commentId);
-//         await deleteComment.destroy();
-//     return res.json({Success: "Comment Deleted"})
-// }))
+router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {
+    const commentId = req.params.id;
+    const deleteComment = await Comment.findByPk(commentId);
+        await deleteComment.destroy();
+    return res.json(deleteComment)
+}))
 
 module.exports = router;

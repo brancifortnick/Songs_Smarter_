@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import {useHistory} from 'react-router';
+import { useHistory} from 'react-router';
 import './SongForm.module.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect, Link } from 'react-router-dom';
+// import { Redirect, Link } from 'react-router-dom';
 import { createSong} from '../../store/song';
+import {useParams} from 'react-router';
 
-    const SongForm = () => {
-
+   const SongForm = () => {
+        const {id} = useParams()
         let user = useSelector(state=> state.session.user)
-        let userId = user.id
+        let userId = id
         const dispatch = useDispatch();
         const[artist, setArtist] = useState('');
         const[link, setLink] = useState('');
@@ -18,11 +19,8 @@ import { createSong} from '../../store/song';
         const submitForm = (e) => {
             e.preventDefault();
             dispatch(createSong({userId, title, link, artist}))
+
         }
-
-
-
-
 
 
 
@@ -51,5 +49,7 @@ import { createSong} from '../../store/song';
             </form>
           </div>
         );
-    }
+    };
+
+
 export default SongForm;

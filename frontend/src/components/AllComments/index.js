@@ -1,7 +1,7 @@
 import { useEffect, useState, useHistory } from "react"
 import { useSelector, useDispatch} from "react-redux"
 import { getComments, createComment} from '../../store/comment';
-
+import CommentDelete from '../CommentDelete'
 const AllComments = (songId) => {
 
     const dispatch = useDispatch();
@@ -29,18 +29,17 @@ const AllComments = (songId) => {
 
     return (
       <div>
-          <h2>Comments</h2>
-          <form onSubmit={addComment}>
-            <textarea />
-          </form>
-          <ul>
-            {comments.map(comment => (
-              <li key={comment.id}>
-                {comment.body}
-              </li>
-            ))}
-          </ul>
-          <button type='submit'>Submit</button>
+        <h2>Comments</h2>
+        <form onSubmit={addComment}>
+          <textarea />
+        </form>
+        <button type="submit">Submit</button>
+        <CommentDelete />
+        <ul>
+          {comments.map((comment) => (
+            <li key={comment.id}>{comment.body}</li>
+          ))}
+        </ul>
       </div>
     );
 

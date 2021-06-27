@@ -7,10 +7,13 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
-import AllSongs from './components/AllSongs';
+// import AllSongs from './components/AllSongs';
 // import Player from './components/AudioPlayer';
 import Upload from './components/Upload';
 import AllComments from "./components/AllComments";
+import SingleSong from './components/SingleSong';
+
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,15 +35,15 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path='/song'>
-            <AllSongs />
+          <Route path='/song/:id'>
+            <SingleSong />
           </Route>
           <Route path='/upload'>
             <Upload />
           </Route>
-          <Route path='/comments'>
+          {/* <Route path='/comments'>
             <AllComments />
-          </Route>
+          </Route> */}
           <Route path='/add-songs'>
             <SongForm />
           </Route>

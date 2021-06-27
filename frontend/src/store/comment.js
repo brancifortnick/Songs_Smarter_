@@ -25,19 +25,19 @@ const get = (comments) => ({
 });
 
 
-const create = (addComment )=> ({
+const create = (comment )=> ({
     type: CREATE_COMMENT,
-    payload: addComment,
+    payload: comment,
 });
 
-const edit = (commentEdit) => ({
+const edit = (comment) => ({
     type: EDIT_COMMENT,
-    payload: commentEdit
+    payload: comment,
 });
 
-const remove = (commentId) => ({
+const remove = (id) => ({
     type: DELETE_COMMENT,
-    payload: commentId,
+    payload: id,
 });
 
 
@@ -95,22 +95,22 @@ export const createComment = (addComment) => async(dispatch) => {
 
 // //*     delete       *//
 
-// export const deleteComment = (commentId, userId ) => async(dispatch)=> {
-//     const res = await csrfFetch('api/comment', {
-//         method: "DELETE",
-//             body: JSON.stringify({
-//                 commentId,
-//                 userId,
-//             }),
-//         headers: {
-//             'Content-Type': 'application/json',
-//         }
-//     });
-//         if(res.ok){
-//             const comment = await res.json();
-//                dispatch(remove(comment))
-//         }
-// };
+export const deleteComment = (commentId, userId ) => async(dispatch)=> {
+    const res = await csrfFetch('api/comment', {
+        method: "DELETE",
+            body: JSON.stringify({
+                commentId,
+                userId,
+            }),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+        if(res.ok){
+            const comment = await res.json();
+               dispatch(remove(comment))
+        }
+};
 
 
 //*            initialState               *//

@@ -1,14 +1,15 @@
 .tableContainer {
   width: 75%;
   margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-rows: subgrid;
   justify-content: center;
 }
 
 .table {
   width: 100%;
   border: thin solid black;
-  padding: 0.35rem;
+  padding: 0.2px;
   border-radius: 0.25rem;
 }
 
