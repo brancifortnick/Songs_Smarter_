@@ -18,9 +18,9 @@ const CommentCreate = () => {
   const updateBody = (e) => setBody(e.target.value)
   const songId = id;
 
-  useEffect(() => {
-    dispatch(getComments());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getComments());
+  // }, [dispatch]);
 
 
   const onSubmit = async (e) => {
@@ -31,9 +31,12 @@ const CommentCreate = () => {
         body,
     }
   const newComment = await dispatch(createComment(comment));
-  console.log(newComment, "______________newComment______________")
+
+  // console.log(newComment, "______________newComment______________")
     if(newComment){
-        history.push(`/song/${id}`)
+      dispatch(getComments());
+      setBody('')
+      history.push(`/song/${id}`)
     }
   }
 

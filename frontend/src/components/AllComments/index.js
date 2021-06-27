@@ -37,8 +37,8 @@ const AllComments = () => {
         </form> */}
         <ul>
           {comments.map(comment =>
-            <li key={comment.id}>
-              {comment.body}
+            <li key={comment?.id}>
+              {comment?.body}
             </li>
           )}
         </ul>
