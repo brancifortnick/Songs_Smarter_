@@ -18,14 +18,15 @@ router.get('/', asyncHandler(async(req, res)=> {
 router.get('/:id', asyncHandler(async(req, res)=>{
 
     const song = await Song.findByPk(req.params.id);
-    console.log(song, '___________________________________')
+    // console.log(song, '___________________________________')
     if(song){
 
         return res.json(song)
     }
 }))
 
-router.post('/new', asyncHandler, (async(req, res)=> {
+router.post('/', asyncHandler, (async(req, res)=> {
+    console.log("________inapi_______________")
     const {userId, title, link, artist} = req.body;
     const song = await Song.create({
         userId,

@@ -9,7 +9,7 @@ import {useParams} from 'react-router';
    const SongForm = () => {
         const {id} = useParams()
         let user = useSelector(state=> state.session.user)
-        let userId = id;
+        let userId = user.id;
         const dispatch = useDispatch();
         const[artist, setArtist] = useState('');
         const[link, setLink] = useState('');
@@ -17,6 +17,7 @@ import {useParams} from 'react-router';
 
 
         const submitForm = (e) => {
+          // console.log(userId, "")
             e.preventDefault();
             dispatch(createSong({userId, title, link, artist}))
 

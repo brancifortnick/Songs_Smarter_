@@ -97,8 +97,8 @@ export const createComment = (comment) => async(dispatch) => {
 // //*     delete       *//
 
 export const deleteComment = (id) => async(dispatch)=> {
-    console.log(id.id, "_______idCommentThunk________________")
-    const res = await csrfFetch(`/api/comment/delete/${id.id}`, {
+
+    const res = await csrfFetch(`/api/comment/delete/${id}`, {
         method: "DELETE",
         body: JSON.stringify({id})
 

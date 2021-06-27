@@ -14,7 +14,7 @@ const AllComments = () => {
     useEffect(()=> {
 
         dispatch(getComments())
-    },[dispatch])
+    },[dispatch, DeleteComment])
 
 
     // const onSubmit = (e) => {
@@ -40,8 +40,8 @@ const AllComments = () => {
           {comments.map(comment =>
             <li key={comment?.id}>
               {comment?.body}
-              {comment?.id}
-              <DeleteComment id={comment?.id} />
+
+              <DeleteComment commentId={comment?.id} />
             </li>
           )}
         </ul>

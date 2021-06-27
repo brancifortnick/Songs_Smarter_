@@ -12,24 +12,34 @@ import DeleteComment from "../CommentDelete";
 const SingleSong = () => {
     const dispatch = useDispatch();
     const { id } = useParams()
-    const song = useSelector(state => Object.values(state.song));
-    // console.log(song,'_____________________________')
+    let song = useSelector(state => Object.values(state?.song));
+    console.log(song,'_____________________________')
+    song = song[0]
 
-    // const blue = songs.filter((song)=> {
-    //     if(song.id === id)
-    //     return song;
-    // })
+
+    const openInNewTab = () => {
+     const newWindow = window.open(
+       song?.url,
+       "_blank",
+       "noopener,noreferrer"
+     );
+     if (newWindow) newWindow.opener = null;
+   };
     useEffect(()=> {
 
         dispatch(getOneSong(Number(id)))
     },[dispatch, id])
 
         return (
-          <div className='audio-photo'>
+          <div className="audio-photo">
             <div id="single-song">
-              {/* <h1>{song[0].title}</h1> */}
+              <div className="song-title">{song?.title}</div>
+              <button className="button" onClick={openInNewTab}>
+                Listen here...
+              </button>
               <DeleteSong />
             </div>
+
             <div>
               <CommentCreate />
             </div>
