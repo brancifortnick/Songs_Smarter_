@@ -1,3 +1,5 @@
+
+
 import { csrfFetch } from "./csrf";
 
 
@@ -62,7 +64,7 @@ export const getAllSongs = () => async(dispatch)=> {
 
 export const createSong = (song) => async(dispatch) => {
   const {userId, title, link, artist} = song;
-     console.log('__________instore__________',song)
+
     const res = await csrfFetch('/api/songs/create', {
         method: "POST",
         headers: {
@@ -70,7 +72,7 @@ export const createSong = (song) => async(dispatch) => {
         },
         body: JSON.stringify({userId, title, link, artist})
     });
-console.log('____here________________')
+
     if(res.ok) {
         const song = await res.json();
         dispatch(addSong(song))

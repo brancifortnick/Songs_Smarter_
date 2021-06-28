@@ -4,7 +4,7 @@ import './SongForm.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { createSong} from '../../store/song';
 import {useParams} from 'react-router';
-
+import styles from "./SongForm.module.css";
    const SongForm = () => {
      const history = useHistory()
         const {id} = useParams()
@@ -18,16 +18,17 @@ import {useParams} from 'react-router';
 
         const submitForm = (e) => {
             e.preventDefault();
-            dispatch(createSong({userId, title, link, artist}))
+            const song = { userId, title, link, artist };
+            dispatch(createSong(song))
             history.push(`/song/${userId}`)
         }
 
 
 
         return (
-          <div>
-            <form onSubmit={submitForm} className="form-container">
-              <div className="form-inpuit-wrapper">
+          <div className={styles.formContainer}>
+            <form onSubmit={submitForm} className={styles.formContainer}>
+              <div className="form-input-wrapper">
                 <label>Artist</label>
                 <input
                   name="artist"

@@ -18,14 +18,16 @@ const AllSongs = () => {
 
 
     return (
-      <div id="songsContainer">
-        <ul>
-          {songs.map((song) => (
-            <Link to={`/song/${song?.id}`}>
-              <div key={song?.id}>{song?.title}</div>
-            </Link>
-          ))}
-        </ul>
+
+        <div id="songsContainer">
+          <ul className="profile-button-collection">
+            {songs.map((song) => (
+              <Link to={`/song/${song?.id}`}>
+                <div key={song?.id}>{song?.title}</div>
+              </Link>
+            ))}
+          </ul>
+
       </div>
     );
 };

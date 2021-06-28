@@ -13,7 +13,6 @@ const SingleSong = () => {
     const dispatch = useDispatch();
     const { id } = useParams()
     let song = useSelector(state => Object.values(state?.song));
-    console.log(song,'_____________________________')
     song = song[0]
 
 
@@ -33,7 +32,7 @@ const SingleSong = () => {
         return (
           <div className="audio-photo">
             <div id="single-song">
-              <div className="song-title">{song?.title}</div>
+              <h2 className="song-title">{song?.title}</h2>
               <button className="button" onClick={openInNewTab}>
                 Listen here...
               </button>

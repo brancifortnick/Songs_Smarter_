@@ -1,9 +1,10 @@
+
 const { requireAuth } = require('../../utils/auth');
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
 const { Song, Comment, User } = require('../../db/models')
-const { handlerValidationErrors } = require('../../utils/validation');
+
 
 
 
@@ -18,7 +19,7 @@ router.get('/', asyncHandler(async(req, res)=> {
 router.get('/:id', asyncHandler(async(req, res)=>{
 
     const song = await Song.findByPk(req.params.id);
-    // console.log(song, '___________________________________')
+
     if(song){
 
         return res.json(song)
@@ -26,7 +27,7 @@ router.get('/:id', asyncHandler(async(req, res)=>{
 }))
 
 router.post('/create', asyncHandler(async(req, res)=> {
-    console.log("________inapi_______________")
+
     const {userId, title, link, artist} = req.body;
     const song = await Song.create({
         userId,
@@ -75,8 +76,4 @@ router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {
     }
 }))
 
-
-
-
-
-module.exports = router
+module.exports = router;

@@ -45,7 +45,8 @@ const CommentCreate = () => {
     <div>
       <h2>Comments</h2>
       <form onSubmit={onSubmit}>
-        <input
+
+        <textarea
           type="textarea"
           placeholder="Comment here..."
           value={body}

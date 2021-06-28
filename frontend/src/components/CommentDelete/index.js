@@ -22,7 +22,7 @@ const DeleteComment = ({commentId}) => {
       <form className="deleteFormContainer">
         <div className="delete-wrapper">
           <button className="delete-comment" onClick={deleteEvent}>
-            Delete Comment
+            Delete
           </button>
         </div>
       </form>
