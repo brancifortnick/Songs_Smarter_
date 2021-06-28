@@ -13,7 +13,6 @@ const DeleteComment = ({commentId}) => {
 
     const deleteEvent = async(e) => {
         e.preventDefault();
-        console.log('deleted comment', commentId, Number(id), "____SONGID")
         await dispatch(deleteComment(commentId))
 
         history.push(`/song/${id}`);

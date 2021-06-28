@@ -75,24 +75,24 @@ export const createComment = (comment) => async(dispatch) => {
 
 // //*         edit              *//
 
-// export const editComment = (commentEdit, commentId, userId) => async (dispatch)=> {
-//     const data = JSON.stringify({
-//         commentEdit,
-//         commentId,
-//          userId,
-//      });
-//      const res = await csrfFetch('api/comment', {
-//          method: "PUT",
-//          body: data,
-//          headers: {
-//              "Content-Type": "application/json",
-//          }
-//      });
-//      if(res.ok){
-//          const comment = await res.json();
-//          dispatch(edit(comment))
-//      }
-// }
+export const editComment = (commentId, comment) => async (dispatch)=> {
+    console.log(commentId, "_________commentId________")
+    const data = JSON.stringify({
+        commentId,
+        comment,
+     });
+     const res = await csrfFetch(`/api/comment/${commentId}`, {
+         method: "PUT",
+         body: data,
+         headers: {
+             "Content-Type": "application/json",
+         }
+     });
+     if(res.ok){
+         const comment = await res.json();
+         dispatch(edit(comment))
+     }
+}
 
 // //*     delete       *//
 
@@ -129,18 +129,18 @@ const commentReducer = (state = initialState, action) => {
             const newState = {...state}
             newState[action.comment] = action.comment;
             return newState
-        // }
-        // case EDIT_COMMENT: {
-        //     const newState = {...state}
-        //     newState[action.payload] = action.payload;
-        //     return newState;
+        }
+        case EDIT_COMMENT: {
+            const newState = {...state}
+            newState[action.payload] = action.payload;
+            return newState;
         }
         case DELETE_COMMENT: {
             const newState = {...state}
             delete newState[action.id]
             return newState;
         }
-        // }
+
         default:
             return state;
     }

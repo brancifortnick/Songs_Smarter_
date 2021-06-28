@@ -46,16 +46,17 @@ router.post(
 );
 
 
-// router.put('/:id/comment/:songId', requireAuth, asyncHandler(async(req, res)=> {
-//     const commentId = req.params.songId;
-//     const { body } = req.body;
+router.put('/:id', requireAuth, asyncHandler(async(req, res)=> {
+    const commentId = req.params.id;
+    const { body } = req.body;
 
-//     const updateComment = await Comment.findByPk(commentId)
-//     updateComment.update({
-//         body,
-//     })
-//     return res.json({Success: "Updated"})
-// }));
+    const updateComment = await Comment.findByPk(commentId)
+    console.log("______did we make it here _________")
+    updateComment.update({
+        body,
+    })
+    return res.json({Success: "Updated"})
+}));
 
 
 router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {

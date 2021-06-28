@@ -2,6 +2,7 @@ import { useEffect, useState, useHistory } from "react"
 import { useSelector, useDispatch} from "react-redux"
 import { getComments} from '../../store/comment';
 import DeleteComment from '../CommentDelete';
+import CommentEdit from '../CommentEdit'
 
 const AllComments = () => {
 
@@ -40,8 +41,8 @@ const AllComments = () => {
           {comments.map(comment =>
             <li key={comment?.id}>
               {comment?.body}
-
               <DeleteComment commentId={comment?.id} />
+              <CommentEdit id={comment.id} />
             </li>
           )}
         </ul>

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useHistory} from 'react-router';
 import './SongForm.module.css'
 import { useSelector, useDispatch } from 'react-redux';
-// import { Redirect, Link } from 'react-router-dom';
 import { createSong} from '../../store/song';
 import {useParams} from 'react-router';
 
    const SongForm = () => {
+     const history = useHistory()
         const {id} = useParams()
         let user = useSelector(state=> state.session.user)
         let userId = user.id;
@@ -17,10 +17,9 @@ import {useParams} from 'react-router';
 
 
         const submitForm = (e) => {
-          // console.log(userId, "")
             e.preventDefault();
             dispatch(createSong({userId, title, link, artist}))
-
+            history.push(`/song/${userId}`)
         }
 
 

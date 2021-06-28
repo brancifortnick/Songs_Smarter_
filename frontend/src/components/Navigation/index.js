@@ -7,7 +7,7 @@ import "./Navigation.css";
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
-  if(sessionUser){
+  if(sessionUser && isLoaded){
 
 
   return (
@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
         </NavLink>
       </div>
       <div className="nav-link">
-        <NavLink to="/upload">Upload Here</NavLink>
+        <NavLink to="/upload">Song Upload</NavLink>
       </div>
       <div className="nav-link">
         <NavLink to="/song">Songs</NavLink>
