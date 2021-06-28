@@ -5,6 +5,7 @@ import DeleteComment from '../CommentDelete';
 import CommentEdit from '../CommentEdit'
 import './AllComments.css';
 import SingleSong from '../SingleSong/index';
+
 const AllComments = () => {
     const dispatch = useDispatch();
     const comments = useSelector(state=> Object.values(state.comment))
@@ -14,19 +15,24 @@ const AllComments = () => {
 
     return (
       <div>
-        <div id="single-song">
-          <h2></h2>
-          <ul id='comment-text'>
-            {comments.map((comment) => (
-              <div key={comment?.id}>
-                {comment?.body}
-
-                <DeleteComment commentId={comment?.id} />
-                <CommentEdit id={comment?.id} />
-              </div>
-            ))}
-          </ul>
-        </div>
+        <form className="form-container">
+          <div id="single-song">
+            <h2></h2>
+            <ul id="comment-text">
+              {comments.map((comment) => (
+                <div key={comment?.id}>
+                  {comment?.body}
+                  <div>
+                  <DeleteComment commentId={comment?.id} />
+                  </div>
+                  <div>
+                  <CommentEdit id={comment?.id} />
+                  </div>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </form>
       </div>
     );
 

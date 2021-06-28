@@ -30,6 +30,7 @@ function SignupFormPage() {
   };
 
   return (
+
       <div className={styles.formContainer}>
             <form onSubmit={handleSubmit}>
             <ul className={styles.errList}>

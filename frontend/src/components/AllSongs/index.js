@@ -24,12 +24,10 @@ const AllSongs = () => {
             {songs.map((song) => (
               <Link to={`/song/${song?.id}`}>
                 <div key={song?.id}></div>
-                  <h4 id='title-h3'>{song?.userId}{song?.title}</h4>
-
+                  <h4 id='title-h3'>{song?.userId} : {song?.title}</h4>
               </Link>
             ))}
           </ul>
-
       </div>
     );
 };

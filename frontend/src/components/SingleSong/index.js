@@ -7,6 +7,7 @@ import DeleteSong from "../DeleteSong";
 import CommentCreate from "../CommentCreate/CommentCreate";
 import  "./SingleSong.css";
 import DeleteComment from "../CommentDelete";
+import SongForm from "../SongForm/SongForm";
 //! import edit update and delete components//
 
 const SingleSong = () => {
@@ -36,6 +37,9 @@ const SingleSong = () => {
               <button className="button" onClick={openInNewTab}>
                 <h2>{song?.title}</h2>
                 Listen here...
+                <div>
+                Delete your song
+                </div>
               </button>
               <DeleteSong />
             </div>

@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createSong} from '../../store/song';
 import {useParams} from 'react-router';
 import styles from "./SongForm.module.css";
+
+
    const SongForm = () => {
      const history = useHistory()
         const {id} = useParams()
@@ -44,9 +46,17 @@ import styles from "./SongForm.module.css";
                   onChange={(e) => setLink(e.target.value)}
                 />
                 <label>Title</label>
-                <input name='title' type='text' value={title} onChange={(e)=> setTitle(e.target.value)}/>
+                <input
+                  name="title"
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
               </div>
-              <button type='submit' name='song-submit'>Submit</button>
+              <button type="submit" name="song-submit">
+                Submit
+              </button>
+
             </form>
           </div>
         );

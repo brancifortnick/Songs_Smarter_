@@ -1,5 +1,5 @@
 #single-song {
-    margin: 0px;
+    margin: 8px;
     width: 300px;
     padding: 1rem;
     border: 2px;
@@ -7,7 +7,7 @@
 }
 
 .audio-photo {
-  background-image: url(../../assets/lightBlue.jpeg);
+  background-image: url(../../assets/artistPink.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -15,6 +15,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-row: auto;
 
 }
 /*
