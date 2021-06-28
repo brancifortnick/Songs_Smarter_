@@ -130,6 +130,7 @@ const songsReducer = (state = initialState, action) => {
         };
         case GET_ONE_SONG: {
             const oneSong = {...action.song}
+            return oneSong,`one sonnnnnnnnnnnnnnnnnnnnnnnnnnnnn`;//...action.song
         }
         case ADD_SONG: {
             const newState = {...state}
