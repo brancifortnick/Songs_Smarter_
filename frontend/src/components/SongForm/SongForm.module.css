@@ -1,13 +1,40 @@
 
 .formContainer {
+  display: grid;
+  grid-template-rows: 60% 60%;
   background-image: url(../../assets/mic.jpeg);
   background-size: contain;
   background-attachment: fixed;
   background-position: center;
   width: 100%;
   height: 100%;
-  color: #0c1c24;
+  color: #ffffff;
   font-weight: bold;
   /* align-items: flex-start; */
-  padding: 5px;
+  padding: 2px;
+}
+
+.button {
+ margin: 18px;
+ padding: 2em;
+ box-shadow: 0 2px;
+ height: 10%;
+ width: 10%;
+ border-radius: 2em;
+ font-weight: bolder;
+ font-size: 14px;
+ outline-offset: .5em blue;
+ align-items: center;
+ /* justify-content: end; */
+}
+
+.formInputWrapper{
+ margin: 0;
+ padding: 2em;
+ box-shadow: 0 2px;
+ height: 10%;
+ width: 10%;
+ border-radius: 2em;
+ outline-offset: .5em blue;
+ align-items: left;
 }
