@@ -55,16 +55,16 @@ router.post('/create', asyncHandler(async(req, res)=> {
 // );
 
 
-// router.put('/update/:id', requireAuth, asyncHandler(async(req, res)=> {
-//     const commentId = req.params.songId;
-//     const { body } = req.body;
+router.put('/update/:id', requireAuth, asyncHandler(async(req, res)=> {
+    const commentId = req.params.songId;
+    const { body } = req.body;
 
-//     const updateComment = await Comment.findByPk(commentId)
-//     updateComment.update({
-//         body,
-//     })
-//     return res.json({Success: "Updated"})
-// }));
+    const updateComment = await Comment.findByPk(commentId)
+    updateComment.update({
+        body,
+    })
+    return res.json({Success: "Updated"})
+}));
 
 // // // //:id/comments/:songId
 router.delete('/delete/:id', requireAuth, asyncHandler(async(req, res)=> {

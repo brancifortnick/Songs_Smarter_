@@ -24,9 +24,10 @@ const { Song , Comment, User } = require("../../db/models");
 router.get('/all', asyncHandler(async(req, res)=> {
 
   const comments = await Comment.findAll();
-  // console.log({
-  //   ...comments
-  // })
+  console.log({
+    ...comments,
+   "console=logged comment displayed above"
+  })
   return res.json(comments);
 }));
 
@@ -50,9 +51,9 @@ router.put('/:id', requireAuth, asyncHandler(async(req, res)=> {
     const commentId = req.params.id;
     const { body } = req.body;
 
-    const updateComment = await Comment.findByPk(commentId)
+    const updateCom = await Comment.findByPk(commentId)
     console.log("______did we make it here _________")
-    updateComment.update({
+    updateCom.update({
         body,
     })
     return res.json({Success: "Updated"})
