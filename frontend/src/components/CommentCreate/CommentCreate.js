@@ -16,11 +16,12 @@ const CommentCreate = () => {
 
   const [body, setBody] = useState('');
   const updateBody = (e) => setBody(e.target.value)
-  const songId = id;
+  let songId = id;
+  console.log(id, '<<<<<<<<<<<<<<<<<<<<<<<<songId>>>>>>>>>>>>>>>>>>>>>>')
 
-  // useEffect(() => {
-  //   dispatch(getComments());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getComments(Number(id)));
+  }, [dispatch]);
 
 
   const onSubmit = async (e) => {
@@ -32,7 +33,6 @@ const CommentCreate = () => {
     }
   const newComment = await dispatch(createComment(comment));
 
-  // console.log(newComment, "______________newComment______________")
     if(newComment){
       dispatch(getComments());
       setBody('')
