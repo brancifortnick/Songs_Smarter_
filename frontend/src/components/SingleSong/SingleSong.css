@@ -8,8 +8,8 @@
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-row: auto;
-
 }
+
 #single-song {
     margin: 8px;
     width: 300px;
@@ -19,14 +19,14 @@
 }
 
 #song-title{
-  color: rgb(173, 75, )
+  color: rgb(173, 75, 165 )
 }
 
-
+/*
 .create_comment{
 
 }
 
 .all_comments{
 
-}
+} */
