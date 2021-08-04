@@ -1,0 +1,8 @@
+.playButton {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+    margin: 0;
+    padding: 2em;
+    color: gray;
+    background-color: aliceblue;
+}

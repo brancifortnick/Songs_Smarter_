@@ -30,7 +30,7 @@ import styles from "./SongForm.module.css";
         return (
           <div className={styles.formContainer}>
             <form onSubmit={submitForm} className={styles.formContainer}>
-              <div className="form-input-wrapper">
+              <div className={styles.formInputWrapper}>
                 <label>Artist</label>
                 <input
                   name="artist"
@@ -53,7 +53,7 @@ import styles from "./SongForm.module.css";
                   onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
-              <button type="submit" name="song-submit">
+              <button className={styles.button} type="submit" name="song-submit">
                 Submit
               </button>
 

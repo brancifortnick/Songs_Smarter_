@@ -18,11 +18,11 @@
   justify-content: space-between;
   margin: 18px;
 
-  box-shadow: rgb(193, 201, 224);
+  box-shadow: rgb(177, 226, 0);
 }
 
 .input {
-  border: 3px ridge rgb(93, 7, 93);
+  border: 3px ridge rgb(22, 20, 41);
   border-radius: 1em;
   font-size: 22pt;
   text-align: center;
@@ -37,17 +37,17 @@
   height: 35px;
   font-size: 22pt;
   font-weight: bold;
-  color: rgb(121, 76, 109);
+  color: rgb(83, 83, 83);
   text-align: center;
 }
 
 .checkbox {
   word-wrap: normal;
-  color:lavenderblush
+  color:rgb(66, 57, 124)
 }
 
 .forgot {
-  color:lavenderblush;
+  color:rgb(234, 235, 226);
   position: absolute;
   bottom: 2px;
   width: 200px;

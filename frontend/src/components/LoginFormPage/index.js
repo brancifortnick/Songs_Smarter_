@@ -27,7 +27,7 @@ const LoginFormPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="formContainer" onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => (
           <li key={idx}>{error}</li>
@@ -44,12 +44,15 @@ const LoginFormPage = () => {
       </label>
       <label>
         Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <div className="inputDiv">
+          <input
+            className="input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
       </label>
       <button type="submit">Log In</button>
     </form>
