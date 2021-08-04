@@ -11,26 +11,26 @@ module.exports = {
       userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-      },
-      myStemsId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
+        references: { model : 'Users'}
       },
       url: {
+        unique: true,
         allowNull: false,
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(255),
       },
       title: {
         allowNull: false,
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(30),
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now"),
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("now"),
       },
     });
   },

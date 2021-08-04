@@ -1,3 +1,5 @@
+
+/*
 .formContainer {
     display: flex;
     justify-content: space-between;
@@ -5,26 +7,27 @@
     max-height: 750px;
     padding: 15px;
     padding-bottom: 50px;
-    border: 5px solid purple;
+    border: 5px solid rgb(65, 42, 65);
     border-bottom-right-radius: 4rem;
     position: absolute;
     left: 100px;
     top: 50px;
-    background: lavender;
+    background:rgb(61, 52, 52)
 }
 
 .inputdiv {
     display: flex;
-    /* width: 175px; */
+     width: 175px;
     height: 35px;
-    /* justify-content: space-between; */
+    /* justify-content: space-between;
     margin: 18px;
-  
-    box-shadow: royalblue;
-    
-}
+
+    box-shadow: rgb(193, 201, 224);
+
+    }
+
 .input {
-    border: 3px ridge purple;
+    border: 3px ridge rgb(93, 7, 93);
     border-radius: 1em;
     font-size: 22pt;
     text-align: center;
@@ -39,14 +42,14 @@
     height: 35px;
     font-size: 22pt;
     font-weight: bold;
-    color:slateblue;
+    color:rgb(165, 50, 136);
     text-align: center;
-    
+
 }
 
 .checkbox {
     word-wrap: normal;
-    
+
 }
 
 .forgot {
@@ -58,5 +61,6 @@
 
 .remember {
     display: inline-flex;
-    position: relevative;
+    position: relative;
 }
+*/

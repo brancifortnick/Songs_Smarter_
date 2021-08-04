@@ -7,10 +7,12 @@ const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 
 
+
 const { environment } = require('./config');
 const isProduction = environment === 'production';
 
 const app = express();
+
 
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -27,10 +29,10 @@ app.use(
             secure: isProduction,
             sameSite: isProduction && "Lax",
             httpOnly: true,
-            
+
         },
     })
-);  
+);
 app.use(routes);
 
 app.use((_req, _res, next) => {

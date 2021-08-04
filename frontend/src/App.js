@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
+import SongForm from './components/SongForm';
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-
-
+// import Player from './components/AudioPlayer';
+import Upload from './components/Upload';
+import AllComments from "./components/AllComments";
+import SingleSong from './components/SingleSong';
+import CommentDelete from './components/CommentDelete'
 
 function App() {
   const dispatch = useDispatch();
@@ -31,9 +35,19 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path='/songs'>
+          <Route path="/song/:id">
+            <SingleSong />
+          </Route>
+          <Route path="/upload">
+            <SongForm />
+            {/* <Upload /> */}
+          </Route>
+          <Route path="/song">
             <AllSongs />
           </Route>
+          {/* <Route path="/add-songs">
+            <SongForm />
+          </Route> */}
         </Switch>
       )}
     </>
