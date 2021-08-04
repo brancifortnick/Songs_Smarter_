@@ -19,7 +19,7 @@ const AllComments = () => {
           <div id="single-song">
             <h2></h2>
             <ul id="comment-text">
-              {comments.map((comment) => (
+              {comments.map(comment => (
                 <div key={comment?.id}>
                   {comment?.body}
                   <div>
