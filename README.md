@@ -1,7 +1,8 @@
-![updated version0621]
+
+
 # [Songs_Smarter](https://songs-smarter.herokuapp.com)
 
-
+### Status:
 ## [....IN PROGRESS....]
   * INSERT SITE PURPOSE INFO HERE
 
@@ -10,13 +11,9 @@
   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation)
 
 ### Database Schema
-  * ![Schema](https://user-images.githubusercontent.com/65651149/123163450-ba62d700-d43f-11eb-824c-677522cb2693.png)
+  * ![Schema](https://user-images.githubusercontent.com/65651149/123181426-47675980-d45b-11eb-801f-b4a7970388f4.png)
 
-### My Stems
-  * ![myStems Page]()
 
-### Review and Comment
-  *  ![Example Gif of feature]()
 
  ### Technologies Used
  * JavaScript
@@ -35,11 +32,6 @@
    * ability to edit own comment, delete owm comment.
   
 
- ### Brief Code Snippet
-  * 
-  ```javascript
-
-  ```
 # Developers
 
  **Nicholas Brancifort**
