@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./Upload.module.css";
 import { useState, useEffect } from "react";
@@ -26,7 +26,7 @@ const Upload = () => {
         }
       const addedSong = await dispatch(createSong(song));//!createSong
       if(addedSong)
-       return history.push(`/songs/${addedSong.id}`) //? go to song page
+       history.push(`/songs/${addedSong.id}`) //? go to song page
     }
 
     useEffect(()=> {
