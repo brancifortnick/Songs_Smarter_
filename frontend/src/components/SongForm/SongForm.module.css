@@ -1,10 +1,10 @@
 .formContainer {
   display: grid;
   grid-template-rows: fit-content(100%);
-  background-image: url(../../assets/mic.jpeg);
-  background-size: contain;
+  background-image: url(../../assets/recordPlayer.jpg);
+  background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  overflow-x: hidden;
   width: 110%;
   height: 100%;
   color: #ffffff;

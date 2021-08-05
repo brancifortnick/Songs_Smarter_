@@ -4,18 +4,18 @@
   font-weight: bold;
   display: flex;
   height: 30px;
-  text-decoration: grey;
+  color: rgb(173, 76, 160);
   justify-content: space-around;
   text-align: center;
-  padding: 2px;
+  padding: 4px;
 }
 
 .profile-dropdown {
   display: flex;
   flex-direction: column;
-  background-color: rgb(168, 164, 164);
+  background-color: rgb(197, 189, 189);
   align-items: flex-start;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 3px;
   width: 85px;
   height: 35px;
@@ -25,10 +25,6 @@
   width: 100px;
 }
 .profile-button {
-  padding: 2px;
-  margin:2px;
-  width: 50px;
-  height: 25px;
   background-color: whitesmoke;
   border: 1px solid rgb(168, 164, 164);
   border-radius: 3px;
@@ -44,12 +40,11 @@
 }
 
 .user_name{
+  float:left;
   font-size: 18px;
-  color: white;
+  color: rgb(173, 76, 160);
 }
 
 .logout_button{
-  /* padding: 2px;
-  margin: 2px; */
-
+  display:flex;
 }
