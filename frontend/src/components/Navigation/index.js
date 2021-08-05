@@ -40,9 +40,9 @@ function Navigation({ isLoaded }) {
       <div className="nav-link">
         <NavLink to="/login">Log In</NavLink>
       </div>
-      <div className="nav-link">
+      {/* <div className="nav-link">
         <NavLink to="/signup">Sign Up</NavLink>
-      </div>
+      </div> */}
     </div>
   );
  }
