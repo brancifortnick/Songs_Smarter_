@@ -63,14 +63,14 @@ export const getAllSongs = () => async(dispatch)=> {
 //*       add song                *//
 
 export const createSong = (song) => async(dispatch) => {
-  const {userId, title, link, artist} = song;
+  const {userId, title, url} = song;
 
     const res = await csrfFetch('/api/songs/create', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({userId, title, link, artist})
+        body: JSON.stringify({userId, title, url})
     });
 
     if(res.ok) {
@@ -130,7 +130,7 @@ const songsReducer = (state = initialState, action) => {
         };
         case GET_ONE_SONG: {
             const oneSong = {...action.song}
-            return oneSong,`one sonnnnnnnnnnnnnnnnnnnnnnnnnnnnn`;//...action.song
+            return oneSong;
         }
         case ADD_SONG: {
             const newState = {...state}

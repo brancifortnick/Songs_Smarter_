@@ -5,13 +5,14 @@ import "./Upload.module.css";
 import { useState, useEffect } from "react";
 import { createSong } from '../../store/song'
 import { useHistory } from 'react-router';
-
+import { useParams } from "react-router";
 
 
 
 const Upload = () => {
     const history = useHistory()
     const dispatch = useDispatch()
+
     const[title, setTitle] = useState('')
     const[url, setUrl] = useState("");
     const[userId, setUserId] = useState('')
@@ -24,12 +25,13 @@ const Upload = () => {
           url,
           userId,
         }
-      const addedSong = await dispatch(createSong(song));//!createSong
+      const addedSong = dispatch(createSong(song));//!createSong
       if(addedSong)
        history.push(`/songs/${addedSong.id}`) //? go to song page
     }
 
     useEffect(()=> {
+
     },[dispatch])
 
     return (
