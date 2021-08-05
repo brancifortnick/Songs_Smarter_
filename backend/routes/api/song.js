@@ -28,15 +28,13 @@ router.get('/:id', asyncHandler(async(req, res)=>{
 
 router.post('/create', asyncHandler(async(req, res)=> {
 
-    const {userId, title, link, artist} = req.body;
+    const {userId, title, url} = req.body;
     const song = await Song.create({
         userId,
         title,
-        url: link,
-        artist
+        url,
      })
     return res.json(song)
-
 }))
 
 

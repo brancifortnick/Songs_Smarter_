@@ -7,7 +7,7 @@ import usersReducer from './users';
 
 
 const rootReducer = combineReducers({
-  session: sessionReducer,
+   session: sessionReducer,
    users: usersReducer,
    song: songsReducer,
    comment: commentReducer,
