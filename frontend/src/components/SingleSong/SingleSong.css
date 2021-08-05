@@ -1,5 +1,5 @@
 .audio-photo {
-  background-image: url(../../assets/artistPink.jpg);
+  background-image: url(../../assets/musicSymbol.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -11,22 +11,21 @@
 }
 
 #single-song {
-    margin: 8px;
-    width: 300px;
-    padding: 1rem;
-    border: 2px;
-    color: rgb(173, 76, 160)
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  color: rgb(173, 76, 160)
+}
+
+.single_song_button{
+ display:flex;
+ flex-direction: row;
+ justify-content: center;
 }
 
 #song-title{
+  display:flex;
+  flex-direction: column;
   color: rgb(173, 75, 165 )
 }
-
-/*
-.create_comment{
-
-}
-
-.all_comments{
-
-} */

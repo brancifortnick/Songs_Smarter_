@@ -27,12 +27,8 @@ const SingleSong = () => {
     <div className="audio-photo">
       <div id="single-song">
         <h2 className="song-title">{song?.title}</h2>
-        <button className="button" onClick={openInNewTab}>
-          <h2 id="song-title" className="song-title">
-            {song?.title}
-          </h2>
+        <button className="single_song_button" onClick={openInNewTab}>
           Listen here...
-          <div>Delete your song</div>
         </button>
         <DeleteSong />
       </div>

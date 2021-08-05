@@ -8,13 +8,11 @@ grid-template-rows: repeat(10, 50px);
   margin: 6px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  color: white;
+  color: whitesmoke;
   font-weight: 500;
-  border: 2px solid white;
+  border: 2px solid rgb(173, 76, 160);
   border-radius: 3px;
   text-decoration: none;
-
 }
 #songsContainer {
   background-image: url(../../assets/piano.jpeg);

@@ -16,9 +16,8 @@ const AllComments = () => {
     return (
       <div>
         <form className="form-container">
-          <div id="single-song">
-            <h2></h2>
-            <ul id="comment-text">
+          <div className="all_comments">
+            <ol id="comment-text">
               {comments.map(comment => (
                 <div key={comment?.id}>
                   {comment?.body}
@@ -30,7 +29,7 @@ const AllComments = () => {
                   </div>
                 </div>
               ))}
-            </ul>
+            </ol>
           </div>
         </form>
       </div>

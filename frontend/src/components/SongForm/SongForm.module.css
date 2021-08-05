@@ -12,18 +12,6 @@
   padding: 2px;
 }
 
-/* .button {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 30px;
-  padding: 2px;
-  width: 75px;
-  border-radius: 3px;
-  font-size: 14px;
-  align-items: center;
-}
-  /* justify-content: end; */
 .button {
   display:flex;
   flex-direction: column;
