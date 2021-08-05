@@ -14,8 +14,7 @@ const SingleSong = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   let song = useSelector(state => (state.song));
-  // song = song[0];
-  console.log(song, '<<<<<<<<<<<<<<<<<<songFROMSINGLESONG>>>>>>>>>>>>>>>>>>>>>>>>')
+
   const openInNewTab = () => {
     const newWindow = window.open(song?.url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
