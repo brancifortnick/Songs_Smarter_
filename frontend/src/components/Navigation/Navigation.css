@@ -1,13 +1,12 @@
 .nav-bar {
-  background-color: whitesmoke;
+  display: flex;
   font-size: medium;
   font-weight: bold;
-  display: flex;
   height: 30px;
   color: rgb(173, 76, 160);
   justify-content: space-around;
   text-align: center;
-  padding: 4px;
+
 }
 
 .profile-dropdown {

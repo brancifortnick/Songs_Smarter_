@@ -36,7 +36,7 @@ const SingleSong = () => {
       <div className='create_comment'>
         <CommentCreate />
       </div>
-      <div className='all_comments'>
+      <div className='comment_component_container'>
         <AllComments />
       </div>
     </div>

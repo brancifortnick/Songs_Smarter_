@@ -19,7 +19,9 @@ const AllComments = () => {
           <div className="all_comments">
             <ol id="comment-text">
               {comments.map(comment => (
-                <div key={comment?.id}>
+                <div
+                className='comment_body'
+                key={comment?.id}>
                   {comment?.body}
                   <div>
                   <DeleteComment commentId={comment?.id} />

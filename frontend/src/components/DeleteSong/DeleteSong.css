@@ -1,9 +1,15 @@
-.btn {
+.delete_button {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
     background-color: white;
     color: black;
+    cursor: pointer;
+
 }
 
-.btn:hover {
+.delete_button:hover {
   background-color: black;
   color: white;
+  cursor: pointer;
 }

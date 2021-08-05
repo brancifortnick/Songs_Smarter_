@@ -1,10 +1,17 @@
 
-.formContainer{
-  display:flex;
+h2 {
+  color: #ad4ca0;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+.comment_body{
+  display: flex;
   flex-direction: column;
   justify-content: center;
-}
-h2 {
+  align-items: space-between;
   color: #ad4ca0;
 }
 
@@ -16,11 +23,13 @@ h2 {
 }
 
 #comment-text{
- display:flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
  color:whitesmoke;
  font-size: 16pt;
  font-weight: bold;
+}
+
+.delete-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

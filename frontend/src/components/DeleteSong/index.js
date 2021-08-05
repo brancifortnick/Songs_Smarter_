@@ -18,7 +18,9 @@ const DeleteSong = () => {
 
     return (
         <div>
-            <button onClick={deleteEvent}>
+            <button
+            className='delete_button'
+            onClick={deleteEvent}>
                 Delete Song
             </button>
         </div>
