@@ -1,35 +1,87 @@
-
 h2 {
   color: #ad4ca0;
 }
 
-.form-container{
+.form-container {
   display: flex;
   flex-direction: column;
 }
-.comment_body{
+.comment_body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 3px;
+  box-shadow: -1px -3px 8px 8px grey;
+  padding: 4px;
   color: #ad4ca0;
 }
 
-.all_comments{
- display:flex;
- flex-direction: row;
- justify-content: center;
- align-items: center;
-}
-
-#comment-text{
- color:whitesmoke;
- font-size: 16pt;
- font-weight: bold;
-}
-
-.delete-wrapper{
+.all_comments {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+}
+
+#comment-text {
+  color: whitesmoke;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.delete-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.delete_button{
+  padding: 2px;
+  margin: 0px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.single_song_button{
+  padding: 6px;
+  border-radius: 3px;
+}
+.delete-comment{
+  padding: 2px;
+  margin: 0px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+/* .comment_id {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+} */
+.edit_button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.edit-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.single_song_button{
+  padding: 6px;
+  margin: 2px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+.comment_submit{
+  padding: 3px;
+  margin: 3px;
+  border-radius: 4px;
+  font-weight: bold;
 }

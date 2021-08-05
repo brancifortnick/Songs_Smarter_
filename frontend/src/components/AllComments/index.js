@@ -23,11 +23,11 @@ const AllComments = () => {
                 className='comment_body'
                 key={comment?.id}>
                   {comment?.body}
-                  <div>
-                  <DeleteComment commentId={comment?.id} />
-                  </div>
-                  <div>
+                  <div className='comment_id'>
                   <CommentEdit id={comment?.id} />
+                  </div>
+                  <div className='delete_button'>
+                  <DeleteComment commentId={comment?.id} />
                   </div>
                 </div>
               ))}
