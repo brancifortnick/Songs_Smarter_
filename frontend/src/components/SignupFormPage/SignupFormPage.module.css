@@ -8,38 +8,46 @@
   position: absolute;
   content: 100px;
   top: 50px;
+  left: 50px;
   opacity: 0.8em;
 }
 
 .inputdiv {
   display: flex;
+  justify-content: space-between;
   width: 175px;
   height: 35px;
-  justify-content: space-between;
   margin: 18px;
-
-  box-shadow: rgb(177, 226, 0);
+  box-shadow: lightgray;
 }
 
 .input {
-  border: 3px ridge rgb(22, 20, 41);
   border-radius: 1em;
-  font-size: 22pt;
+  font-size: 20pt;
   text-align: center;
 }
-
+ .submitButton{
+   font-weight: bold;
+  background-color: whitesmoke;
+  border: 3px;
+  border-radius: 3px;
+  position:relative;
+  padding: 3px;
+  font-size:14pt;
+  content: 100px;
+  top: 130px;
+  left: 15px;
+  opacity: 0.8em;
+ }
+/*
 .submitButton {
-  display: block;
-  align-self: center;
-  position: relative;
-  left: 140px;
   width: 150px;
   height: 35px;
   font-size: 22pt;
   font-weight: bold;
   color: rgb(83, 83, 83);
   text-align: center;
-}
+} */
 
 .checkbox {
   word-wrap: normal;

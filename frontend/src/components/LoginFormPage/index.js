@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import "./LoginForm.css";
 
-
-
 const LoginFormPage = () => {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
@@ -27,36 +25,40 @@ const LoginFormPage = () => {
   };
 
   return (
-    <form className="formContainer" onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
-        ))}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <div className="inputDiv">
+    <div className="formContainer">
+      <form className="errors_login" onSubmit={handleSubmit}>
+        <ul>
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
+
+        <div className="div_wrapper">
           <input
-            className="input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            id='username_email_input'
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            placeholder="Username or Email..."
             required
           />
         </div>
-      </label>
-      <button type="submit">Log In</button>
-    </form>
-  );
-}
 
+        <div className="div_wrapper">
+          <input
+            className="password_input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password..."
+            required
+          />
+        </div>
+        <button id="login_button" type="submit">
+          Log In
+        </button>
+      </form>
+    </div>
+  );
+};
 export default LoginFormPage;

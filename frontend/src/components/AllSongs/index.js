@@ -1,15 +1,12 @@
 import { getAllSongs } from "../../store/song";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import "./AllSongs.css";
-import { useParams } from "react-router";
 const AllSongs = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
   const songs = useSelector((state) => Object.values(state.song));
-  console.log(songs, "<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>");
+
 
   useEffect(() => {
     dispatch(getAllSongs());

@@ -13,7 +13,7 @@
 //   const users = useSelector((state) => Object.values(state.users));
 //   // Use a 'react' hook and cause a side effect
 //   useEffect(() => {
-//     dispatch(getUsers());
+//     dispatch(getUsers(users));
 //   }, [dispatch]);
 
 //   return (

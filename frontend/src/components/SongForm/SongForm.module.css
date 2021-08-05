@@ -1,7 +1,7 @@
 
 .formContainer {
   display: grid;
-  grid-template-rows: 60% 60%;
+  grid-template-rows: fit-content(100%);
   background-image: url(../../assets/mic.jpeg);
   background-size: contain;
   background-attachment: fixed;
