@@ -8,11 +8,12 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import MainPage from "./pages/MainPage";
 import AllSongs from './components/AllSongs';
-// import Player from './components/AudioPlayer';
+import Player from "./components/BonusComponents/AudioPlayer/AudioPlayer/AudioPlayer";
 import Upload from './components/Upload';
 import AllComments from "./components/AllComments";
 import SingleSong from './components/SingleSong';
 import CommentDelete from './components/CommentDelete'
+import { getAllSongs } from "./store/song";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ function App() {
           </Route>
           <Route path="/song">
             <AllSongs />
+
           </Route>
           {/* <Route path="/add-songs">
             <SongForm />

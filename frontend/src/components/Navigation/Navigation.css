@@ -24,17 +24,11 @@
   width: 100px;
 }
 .profile-button {
-  background-color: whitesmoke;
-  border: 1px solid rgb(168, 164, 164);
-  border-radius: 3px;
-  text-align: center;
+padding: 2px 2px;
+border: 1px ridge lightgray;
 }
 
 .profile-button:hover{
-  color: whitesmoke;
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: rgb(168, 164, 164);
 
 }
 
