@@ -5,6 +5,8 @@ h2 {
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .comment_body {
   display: flex;
@@ -18,18 +20,22 @@ h2 {
   padding: 4px;
   color: #ad4ca0;
 }
-
+/*
 .all_comments {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-}
+  align-items: flex-end;
+} */
 
-#comment-text {
+#comment_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: whitesmoke;
   font-size: 16pt;
   font-weight: bold;
+
 }
 
 .delete-wrapper {

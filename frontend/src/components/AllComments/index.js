@@ -9,15 +9,16 @@ import SingleSong from '../SingleSong/index';
 const AllComments = () => {
     const dispatch = useDispatch();
     const comments = useSelector(state=> Object.values(state.comment))
+
     useEffect(()=> {
         dispatch(getComments())
-    },[dispatch, DeleteComment])
+    },[dispatch])
 
     return (
       <div>
         <form className="form-container">
           <div className="all_comments">
-            <ol id="comment-text">
+            <ol id="comment_text">
               {comments.map(comment => (
                 <div
                 className='comment_body'
