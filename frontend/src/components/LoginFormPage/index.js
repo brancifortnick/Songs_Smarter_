@@ -26,8 +26,8 @@ const LoginFormPage = () => {
 
   return (
     <div className="formContainer">
-      <form className="errors_login" onSubmit={handleSubmit}>
-        <ul>
+      <form onSubmit={handleSubmit}>
+        <ul className='errors_login'>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
@@ -35,7 +35,7 @@ const LoginFormPage = () => {
 
         <div className="div_wrapper">
           <input
-            id='username_email_input'
+            id="username_email_input"
             type="text"
             value={credential}
             onChange={(e) => setCredential(e.target.value)}

@@ -1,8 +1,14 @@
 .formContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  display: grid;
+  grid-template-rows: fit-content(100%);
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../../assets/piano.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 /* .div_wrapper {
@@ -10,19 +16,18 @@
 } */
 #login_button {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  padding:4px;
-  margin: 2px;
   border: solid 1px rgb(44, 43, 43);
   border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: -.5px -.5px 3px 3px lightslategray;
+  box-shadow: -0.5px -0.5px 3px 3px lightslategray;
   padding-left: 3px;
   padding-right: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
+  width: 80px;
 }
 /* .inputdiv {
     display: flex;
@@ -34,8 +39,9 @@
 
 } */
 
-.password_input, #username_email_input {
-  border: 3px ridge grey;
+.password_input,
+#username_email_input {
+  border: 1px ridge grey;
   border-radius: 1rem;
   font-size: 22pt;
   text-align: center;

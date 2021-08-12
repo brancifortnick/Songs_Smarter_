@@ -9,7 +9,6 @@ const CommentEdit = ({ id }) => {
   // const userId = useSelector(state=> state.session?.user)
   const [edit, setEdit] = useState(false);
   const [comment, setComment] = useState("");
-
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(editComment(Number(id)));
@@ -29,7 +28,11 @@ const CommentEdit = ({ id }) => {
           placeholder="Comment here..."
         ></input>
         <button
-         type="submit" name="button-save">
+          id='button_save'
+          onClick={(e) => setComment(e.target.value)}
+          type="submit"
+          name="button-save"
+        >
           Save
         </button>
       </form>
