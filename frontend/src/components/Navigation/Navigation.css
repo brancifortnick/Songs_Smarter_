@@ -3,41 +3,48 @@
   font-size: medium;
   font-weight: bold;
   height: 30px;
-  color: rgb(173, 76, 160);
+  color: black;
   justify-content: space-around;
   text-align: center;
-
 }
 
 .profile-dropdown {
   display: flex;
   flex-direction: column;
   background-color: rgb(197, 189, 189);
-  align-items: flex-start;
-  border: 1px solid black;
+  margin: 0px;
+  border: 1px solid lightslategray;
   border-radius: 3px;
-  width: 85px;
+  width: 150px;
   height: 35px;
 }
 .nav-link {
   text-decoration: none;
   width: 100px;
+  margin: 2px;
 }
 .profile-button {
-padding: 2px 2px;
-border: 1px ridge lightgray;
+  margin: 1px;
+  padding-top: 2px;
+  border: 1px solid lightslategray;
+  border-radius: 3px;
 }
 
-.profile-button:hover{
-
+.profile-button:hover {
+  background-color: white;
+  box-shadow: -2px -4px 8px lightslategray;
+  border: 1px solid black;
+  opacity: none;
 }
 
-.user_name{
-  float:left;
+.user_name {
+  float: left;
   font-size: 18px;
-  color: rgb(173, 76, 160);
+  color: black;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.logout_button{
-  display:flex;
+.logout_button {
+  display: flex;
+  float: left;
 }
