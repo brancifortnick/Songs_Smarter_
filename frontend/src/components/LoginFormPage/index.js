@@ -46,6 +46,7 @@ const LoginFormPage = () => {
 
         <div className="div_wrapper">
           <input
+            id='password_input'
             className="password_input"
             type="password"
             value={password}
@@ -55,7 +56,7 @@ const LoginFormPage = () => {
           />
         </div>
         <button id="login_button" type="submit">
-          Log In
+          Sign In
         </button>
       </form>
     </div>

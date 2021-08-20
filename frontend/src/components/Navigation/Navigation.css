@@ -9,12 +9,7 @@
 }
 
 .profile-dropdown {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(197, 189, 189);
-  margin: 0px;
-  border: 1px solid lightslategray;
-  border-radius: 3px;
   width: 150px;
   height: 35px;
 }
