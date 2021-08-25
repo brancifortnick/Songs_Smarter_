@@ -26,6 +26,7 @@ const LoginFormPage = () => {
 
   return (
     <div className="formContainer">
+    <h4 id="div_wrapper" type='text'>Login Here</h4>
       <form onSubmit={handleSubmit}>
         <ul className='errors_login'>
           {errors.map((error, idx) => (
@@ -55,7 +56,7 @@ const LoginFormPage = () => {
             required
           />
         </div>
-        <button id="login_button" type="submit">
+        <button id="login_button" type="submit" className='login_wrapper'>
           Sign In
         </button>
       </form>

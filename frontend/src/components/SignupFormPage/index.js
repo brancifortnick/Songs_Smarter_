@@ -90,7 +90,7 @@ function SignupFormPage() {
         </button>
       </form>
       <div className={styles.forgot}>
-        <a href="/" className={styles.forgot}>
+        <a href="/login" className={styles.forgot}>
           Have an Account? Login Here
         </a>
       </div>

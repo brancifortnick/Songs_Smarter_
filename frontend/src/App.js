@@ -14,6 +14,9 @@ import AllComments from "./components/AllComments";
 import SingleSong from './components/SingleSong';
 import CommentDelete from './components/CommentDelete'
 import { getAllSongs } from "./store/song";
+import UserRow from "./components/UserRow";
+import UsersContainer from './components/UsersContainer';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -41,11 +44,12 @@ function App() {
           </Route>
           <Route path="/upload">
             <SongForm />
-            {/* <Upload /> */}
           </Route>
           <Route path="/song">
             <AllSongs />
-
+          <Route path='/users/:id'>
+            <UsersContainer />
+          </Route>
           </Route>
           {/* <Route path="/add-songs">
             <SongForm />

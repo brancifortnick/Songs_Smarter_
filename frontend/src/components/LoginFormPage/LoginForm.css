@@ -1,25 +1,45 @@
 .formContainer {
   display: grid;
   grid-template-rows: fit-content(100%);
-  justify-content: space-around;
-  align-items: center;
-  background-image: url(../../assets/piano.jpeg);
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  text-align: center;
+  background-image: url(../../assets/pianoHand.jpg);
   background-size: cover;
   background-attachment: fixed;
+  border-block-end-color: purple;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  padding-top: 80px;
-  padding-left: 250px;
 }
 
-#login_button {
-  border: solid 1px rgb(44, 43, 43);
-  border-radius: 6px;
-  /* box-shadow: -0.5px -0.5px 3px 3px lightslategray; */
-  padding: 4px 4px 4px 4px;
-  width: 80px;
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding-right: 0px;
+  float: left; */
 }
+
+.login_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 3px;
+}
+
+
+#login_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 11.5px 23px;
+  font-size: 17pt;
+}
+
 /* .inputdiv {
     display: flex;
      width: 175px;
@@ -31,23 +51,18 @@
 } */
 #username_email_input {
   border: 1px ridge grey;
-  border-radius: 1rem;
-  font-size: 22px;
+  font-size: 32pt;
   text-align: center;
-  align-items: center;
-  padding: 0px 0px 0px 12px;
+  padding: 0px 0px 0px 0px;
   margin: 2px;
 }
 
 
 .password_input {
   border: 1px ridge grey;
-  border-radius: 1rem;
-  font-size: 22px;
+  font-size: 24pt;
   text-align: center;
-  align-items: center;
-  padding: 0px 0px 0px 12px;
-   margin: 2px;
+  margin: 2px;
 }
 
 .errors_login {

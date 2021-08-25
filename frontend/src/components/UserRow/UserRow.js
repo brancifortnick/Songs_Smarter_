@@ -14,11 +14,12 @@ const UserRow = ({ user }) => {
   }
 
   return (
-    <tr>
-      <td>{user.id}</td>
-      <td>{user.name}</td>
-      <td>{user.email}</td>
-    </tr>
+    <div className="user_row">
+      <h1>Active Users</h1>
+      <div id="name" type="text" className="user_information">
+        {user.username}
+      </div>
+    </div>
   );
 };
 

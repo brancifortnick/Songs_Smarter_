@@ -1,7 +1,9 @@
 .formContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  max-width: 450px;
+  align-items: center;
+  /* max-width: 450px;
   max-height: 750px;
   padding: 15px;
   padding-bottom: 50px;
@@ -9,12 +11,10 @@
   content: 100px;
   top: 50px;
   left: 50px;
-  opacity: 0.8em;
+  opacity: 0.8em; */
 }
 
 .inputdiv {
-  display: flex;
-  justify-content: space-between;
   width: 175px;
   height: 35px;
   margin: 18px;

@@ -1,4 +1,4 @@
-.nav-bar {
+div.nav-bar {
   display: flex;
   font-size: medium;
   font-weight: bold;
@@ -6,14 +6,17 @@
   color: black;
   justify-content: space-around;
   text-align: center;
+  border: 3px solid grey;
+  background-color: whitesmoke;
+  border-radius: 3px;
 }
 
 .profile-dropdown {
-  background-color: rgb(197, 189, 189);
+  background-color: rgb(32, 26, 26);
   width: 150px;
   height: 35px;
 }
-.nav-link {
+div .nav-link {
   text-decoration: none;
   width: 100px;
   margin: 2px;
@@ -27,16 +30,8 @@
 
 .profile-button:hover {
   background-color: white;
-  box-shadow: -2px -4px 8px lightslategray;
   border: 1px solid black;
   opacity: none;
-}
-
-.user_name {
-  float: left;
-  font-size: 18px;
-  color: black;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .logout_button {
