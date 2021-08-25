@@ -32,22 +32,30 @@ const SongForm = () => {
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
           /> */}
-          <label>Url</label>
-          <input
-            name="url"
-            type="text"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-          />
-          <label>Title</label>
-          <input
-            name="title"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+          <div id="song_form_outterdiv">
+            <input
+              name="url"
+              placeholder="ie: https://soundcloud.com/.."
+              type="text"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+            />
+
+            <input
+              name="title"
+              type="text"
+              placeholder="Title..."
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
         </div>
-        <button className={styles.button} type="submit" name="song-submit">
+        <button
+          placeholder=""
+          className={styles.button}
+          type="submit"
+          name="song-submit"
+        >
           Submit
         </button>
       </form>

@@ -1,6 +1,6 @@
-.formContainer {
-  display: grid;
-  grid-template-rows: fit-content(100%);
+.formContainer{
+
+  grid-template-columns: fit-content(100%);
   background-image: url(../../assets/recordPlayer.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -13,15 +13,12 @@
 }
 
 .button {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  width:13%;
-  margin: 20px;
-  border: 1px solid black;
-  font-weight: 18px;
-  border-radius: 3px;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
   background-color: whitesmoke;
 }
 
@@ -31,8 +28,9 @@
 
 .formInputWrapper {
   display: flex;
-  flex-direction: column;
-  padding: 2em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2px;
   height: 10%;
   width: 10%;
   border-radius: 2em;
