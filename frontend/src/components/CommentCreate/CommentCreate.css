@@ -1,0 +1,16 @@
+/* .comment_create_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left; */
+#comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.create_comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
