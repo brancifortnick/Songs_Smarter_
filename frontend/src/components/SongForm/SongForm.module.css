@@ -1,5 +1,4 @@
 .formContainer{
-
   grid-template-columns: fit-content(100%);
   background-image: url(../../assets/recordPlayer.jpg);
   background-size: cover;
