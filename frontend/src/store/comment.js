@@ -43,7 +43,6 @@ export const getComments = (comment) => async (dispatch) => {
     headers: {
       "Content-Type": "Application/json",
     },
-    body: JSON.stringify(comment),
   });
   if (res.ok) {
     const comments = await res.json();
@@ -113,7 +112,7 @@ const initialState = {};
 const commentReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COMMENT: {
-      const allComments = { ...state };
+      const allComments = {};
       action.payload.forEach((comment) => {
         allComments[comment.id] = comment;
       });

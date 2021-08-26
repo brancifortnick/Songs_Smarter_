@@ -6,20 +6,20 @@ const { Song, Comment, User } = require("../../db/models");
 
 //*route location???????
 
-router.get(
-  "/:id",
-  asyncHandler(async (req, res) => {
-    const getComment = await Comment.findByPk(req.params.id, {
-      include: {
-        model: Song,
-        include: User,
-      },
-    });
-    getComment
-      ? res.json(getComment)
-      : console.log("There are no comments for this song");
-  })
-);
+// router.get(
+//   "/:id",
+//   asyncHandler(async (req, res) => {
+//     const getComment = await Comment.findByPk(req.params.id, {
+//       include: {
+//         model: Song,
+//         include: User,
+//       },
+//     });
+//     getComment
+//       ? res.json(getComment)
+//       : console.log("There are no comments for this song");
+//   })
+// );
 
 //???       ROUTE FIX    ????
 router.get(
