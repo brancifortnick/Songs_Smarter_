@@ -17,7 +17,7 @@ const CommentEdit = ({ id }) => {
   return (
     <div className="edit_button">
       <button type="submit" name="button-edit" onClick={() => setEdit(!edit)}>
-        Edit
+        edit here
       </button>
       <form onSubmit={onSubmit} className="edit-form">
         <input

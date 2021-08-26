@@ -24,7 +24,7 @@ const SingleSong = () => {
   }, [dispatch]);
 
   return (
-    <div className="audio-photo">
+    <div className="audio_outter_div">
       <div id="single-song">
         <h2 className="song-title">{song?.title}</h2>
         <button className="single_song_button" onClick={openInNewTab}>

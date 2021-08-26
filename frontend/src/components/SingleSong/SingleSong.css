@@ -5,31 +5,25 @@
   background-position: center;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* align-items: center; */
-  /* grid-template-columns: 20% 20% 20% 20% 20%; */
-  /* grid-row: auto; */
 }
 
 #single-song {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(173, 75, 165 );
+  color: rgb(173, 75, 165);
 }
 
-.single_song_button{
- display:flex;
- flex-direction: row;
- justify-content: center;
+.single_song_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#song-title{
-  display:flex;
+#song-title {
+  display: flex;
   flex-direction: column;
-  color: rgb(173, 75, 165 );
+  color: rgb(173, 75, 165);
 }
 /* .comment_component_container{
 

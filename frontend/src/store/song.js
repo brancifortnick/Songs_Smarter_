@@ -73,6 +73,7 @@ export const createSong = (song) => async(dispatch) => {
         body: JSON.stringify({userId, title, url})
     });
 
+
     if(res.ok) {
         const song = await res.json();
         dispatch(addSong(song))
@@ -100,13 +101,13 @@ export const createSong = (song) => async(dispatch) => {
 //     }
 //   };
 
-export const deleteSong = (id) => async(dispatch)=> {
+export const deleteSong = ({id}) => async(dispatch)=> {
     const res = await csrfFetch(`/api/songs/delete/${id}`, {
       method: "DELETE",
     })
         if (res.ok) {
            const song = await res.json();
-           dispatch(removeSong(song.id));
+           dispatch(removeSong(song));
         }
 };
 
