@@ -14,7 +14,7 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/song/" />;
+  if (sessionUser) return <Redirect to="/song" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +40,9 @@ function SignupFormPage() {
             <li key={idx}>{error}</li>
           ))}
         </ul>
-        <h1 className={styles.welcometext} type='text'>Join our community Below</h1>
+        <h1 className={styles.welcometext} type="text">
+          Join our community Below
+        </h1>
         <div className={styles.inputdiv}>
           <input
             className={styles.input}
@@ -81,21 +83,23 @@ function SignupFormPage() {
             required
           />
         </div>
+        <button className={styles.submitButton} type="submit">
+          Register
+        </button>
+      </form>
+      <div>
         <label className={styles.checkbox} for="boxy">
           {" "}
           Send me Emails!
         </label>
         <input name="boxy" type="checkbox" className={styles.remember} />
-        <button className={styles.submitButton} type="submit">
-          Register
-        </button>
-      </form>
-      <div className={styles.forgot}>
-        <span>
-          <a href="/login" className={styles.forgot}>
-            Have an Account? Login Here
-          </a>
-        </span>
+        <div className={styles.forgot}>
+          <span>
+            <a href="/login" className={styles.forgot}>
+              Have an Account? Login Here
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   );

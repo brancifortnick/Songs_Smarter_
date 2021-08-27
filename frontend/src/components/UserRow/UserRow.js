@@ -17,7 +17,7 @@ const UserRow = ({ user }) => {
     <div className="user_row">
       <h1>Active Users</h1>
       <div id="name" type="text" className="user_information">
-        {user.username}
+        {user.id}
       </div>
     </div>
   );

@@ -10,7 +10,6 @@
   content: 100px;
   top: 50px;
   left: 50px;
-  opacity: 0.8em;
 }
 
 .inputdiv {
@@ -26,20 +25,19 @@
   text-align: center;
 }
  .submitButton {
-  font-weight: 600px;
+  font-weight: bold;
   width: 150px;
   height: 35px;
   text-align: center;
   background-color: whitesmoke;
-  border: 1px solid black ;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 4px;
   font-size:14pt;
-  top: 130px;
-  left: 15px;
  }
+
  .password_input {
-   padding: 2px;
+
  }
 
 /* .submitButton {
@@ -54,20 +52,26 @@
 .checkbox {
   word-wrap: normal;
   color:rgb(66, 57, 124);
-  font-weight: 1000px;
+  font-weight: bold;
 }
 
 .welcometext{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   font-weight: bold;
   color: whitesmoke;
 }
 .forgot {
-  display: inline-block;
-  flex-direction: row;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: space-around;
   color:whitesmoke;
   bottom: 2px;
-  width: 200px;
+  padding-top: 15px;
 }
 
 .remember {
