@@ -2,17 +2,13 @@
 
 
 
-
-
-
-
 {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   height: 100%;
 }
 

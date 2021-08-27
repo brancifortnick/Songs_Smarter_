@@ -14,7 +14,7 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/song/" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,11 +40,12 @@ function SignupFormPage() {
             <li key={idx}>{error}</li>
           ))}
         </ul>
+        <h1 className={styles.welcometext} type='text'>Join our community Below</h1>
         <div className={styles.inputdiv}>
           <input
             className={styles.input}
             type="text"
-            placeholder="Email"
+            placeholder="Email..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -54,7 +55,7 @@ function SignupFormPage() {
           <input
             type="text"
             className={styles.input}
-            placeholder="Username"
+            placeholder="Username..."
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -64,7 +65,7 @@ function SignupFormPage() {
           <input
             type="password"
             className={styles.input}
-            placeholder="Password"
+            placeholder="Password..."
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -74,7 +75,7 @@ function SignupFormPage() {
           <input
             type="password"
             className={styles.input}
-            placeholder="Confirm Password"
+            placeholder="Confirm Password..."
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
@@ -86,13 +87,15 @@ function SignupFormPage() {
         </label>
         <input name="boxy" type="checkbox" className={styles.remember} />
         <button className={styles.submitButton} type="submit">
-          Sign Up
+          Register
         </button>
       </form>
       <div className={styles.forgot}>
-        <a href="/login" className={styles.forgot}>
-          Have an Account? Login Here
-        </a>
+        <span>
+          <a href="/login" className={styles.forgot}>
+            Have an Account? Login Here
+          </a>
+        </span>
       </div>
     </div>
   );
