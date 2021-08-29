@@ -18,14 +18,13 @@ function Navigation({ isLoaded }) {
         </NavLink>
       </div>
       <div className="nav-link">
-        <NavLink to="/upload">Upload Music</NavLink>
+        <NavLink to="/upload">Upload</NavLink>
       </div>
       <div className="nav-link">
         <NavLink to="/song">All Music</NavLink>
       </div>
       <div className="nav-link">
-        <ProfileButton className="profile-button" user={sessionUser}/>
-
+        <ProfileButton className="profile-button" user={sessionUser} />
       </div>
     </div>
   );
