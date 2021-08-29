@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../store/users";
 import styles from "./UsersContainer.module.css";
-import { fakeUsers } from "../../assets";
+import { User } from '../../components/UsersContainer'
 import UserRow from "../UserRow";
 import usersReducer from "../../store/users";
-const UsersContainer = ({}) => {
+const UsersContainer = ({User}) => {
   // Declare variables from hooks
   const dispatch = useDispatch();
   const users = useSelector((state) => Object.values(state.users));
-  // Use a 'react' hook and cause a side effect
+  // Use a 'react' hook an d cause a side effect
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);

@@ -20,7 +20,7 @@ const AllSongs = () => {
           <Link to={`/song/${song?.id}`}>
             <div id="song-id" className="song-id" key={song?.id}></div>
             <h4 id="title-h3">
-              {(count+=1)} ) {song?.title}
+              {(count+=1)}) {song?.title}
             </h4>
           </Link>
         ))}
