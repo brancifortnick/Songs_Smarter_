@@ -41,7 +41,7 @@ function SignupFormPage() {
           ))}
         </ul>
         <h1 className={styles.welcometext} type="text">
-          Join our community Below
+          Join our Community
         </h1>
         <div className={styles.inputdiv}>
           <input
@@ -87,18 +87,17 @@ function SignupFormPage() {
           Register
         </button>
       </form>
-      <div>
+      <div className={styles.box_check}>
         <label className={styles.checkbox} for="boxy">
-          {" "}
           Send me Emails!
         </label>
         <input name="boxy" type="checkbox" className={styles.remember} />
-        <div className={styles.forgot}>
-          <span>
-            <a href="/login" className={styles.forgot}>
-              Have an Account? Login Here
-            </a>
-          </span>
+      </div>
+      <div className={styles.forgot}>
+        <div>
+          <a href="/login" className={styles.forgot}>
+            Have an Account? Login Here
+          </a>
         </div>
       </div>
     </div>

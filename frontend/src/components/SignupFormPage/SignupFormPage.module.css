@@ -1,24 +1,21 @@
 .formContainer {
-  display: flex;
+ /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
+  justify-content: space-evenly; */
+  /* position: absolute;
   max-width: 450px;
-  max-height: 750px;
+  max-height: 750px; */
   padding: 15px;
   padding-bottom: 50px;
   content: 100px;
   top: 50px;
   left: 50px;
 }
-
 .inputdiv {
-  width: 175px;
   height: 35px;
   margin: 18px;
   box-shadow: lightgray;
 }
-
 .input {
   border-radius: 1em;
   font-size: 20pt;
@@ -50,23 +47,25 @@
 } */
 
 .checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   word-wrap: normal;
   color:rgb(66, 57, 124);
   font-weight: bold;
 }
 
+div.box_check {
+  display: inline-flex;
+  flex-direction: row;
+}
 .welcometext{
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  text-align: center;
   font-weight: bold;
   color: whitesmoke;
 }
 .forgot {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   align-content: flex-end;
   justify-content: space-around;
   color:whitesmoke;
