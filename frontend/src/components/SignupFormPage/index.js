@@ -87,17 +87,19 @@ function SignupFormPage() {
           Register
         </button>
       </form>
-      <div className={styles.box_check}>
-        <label className={styles.checkbox} for="boxy">
-          Send me Emails!
-        </label>
-        <input name="boxy" type="checkbox" className={styles.remember} />
-      </div>
-      <div className={styles.forgot}>
-        <div>
-          <a href="/login" className={styles.forgot}>
-            Have an Account? Login Here
-          </a>
+      <div className={styles.outerform}>
+        <div className={styles.box_check}>
+          <label className={styles.checkbox} for="boxy">
+            Send me Emails!
+          </label>
+          <input name="boxy" type="checkbox" className={styles.remember} />
+        </div>
+        <div className={styles.forgot}>
+          <div className={styles.redirect}>
+            <a href="/login" className={styles.forgot}>
+              Have an Account? Login Here
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,14 +1,13 @@
 div.nav-bar {
   display: flex;
-  font-size: medium;
+  justify-content: space-around;
+  font-size: 18px;
   font-weight: bold;
   height: 30px;
   color: black;
-  justify-content: space-around;
-  text-align: center;
-  border: 3px solid grey;
-  background-color: whitesmoke;
+  border: 1px solid black;
   border-radius: 3px;
+  background-color: whitesmoke;
 }
 
 .profile-dropdown {
@@ -16,10 +15,10 @@ div.nav-bar {
   width: 150px;
   height: 35px;
 }
-div .nav-link {
+div.nav-link {
   text-decoration: none;
   width: 100px;
-  margin: 2px;
+  margin: 4px;
 }
 .profile-button {
   margin: 1px;
@@ -37,4 +36,9 @@ div .nav-link {
 .logout_button {
   display: flex;
   float: left;
+}
+
+a,
+a.active {
+  text-decoration: none;
 }
