@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../store/users";
 import styles from "./UsersContainer.module.css";
-import { User } from '../../components/UsersContainer'
 import UserRow from "../UserRow";
 import usersReducer from "../../store/users";
 const UsersContainer = ({User}) => {
