@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
         </NavLink>
       </div>
       <div className="nav-link">
-        <NavLink to="/upload">Upload 🎵</NavLink>
+        <NavLink to="/upload">Upload Music</NavLink>
       </div>
       <div className="nav-link">
         <NavLink to="/song">All Music</NavLink>

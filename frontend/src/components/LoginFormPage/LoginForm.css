@@ -1,18 +1,18 @@
 .formContainer {
   display: grid;
   grid-template-rows: fit-content(100%);
-  /* justify-content: space-around; */
-  /* align-items: center; */
   text-align: center;
   background-image: url(../../assets/pianoHand.jpg);
   background-size: cover;
   background-attachment: fixed;
-  border-block-end-color: purple;
-  overflow-x: hidden;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  color: white;
 }
 
+/* h1.div_wrapper {
+
+} */
 form {
   display: flex;
   flex-direction: column;
@@ -20,26 +20,45 @@ form {
   align-items: center;
 }
 
+/* .login_wrapper::placeholder  */
 .login_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  font-size: 8pt;
-  border-radius: 3px;
-  color: whitesmoke;
 }
-
-
 #login_button {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  text-align: center;
-  font-size: 8pt;
-
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18pt;
+  padding: 2px;
+  color: black;
 }
 
+#username_email_input {
+  border: 1px solid grey;
+  border-radius: 3px;
+  font-size: 22pt;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  margin: 2px;
+}
+.password_input {
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 22pt;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  margin: 2px;
+}
+.errors_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+}
 /* .inputdiv {
     display: flex;
      width: 175px;
@@ -49,28 +68,3 @@ form {
     box-shadow: royalblue;
 
 } */
-#username_email_input {
-  border: 1px solid grey;
-  border-radius: 3px;
-  font-size: 18pt;
-  text-align: center;
-  padding: 0px 0px 0px 0px;
-  margin: 2px;
-}
-
-
-.password_input {
-  border: 1px solid black;
-  border-radius: 3px;
-  font-size: 16pt;
-  text-align: center;
-  margin: 2px;
-}
-
-.errors_login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Courier New", Courier, monospace;
-}
