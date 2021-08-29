@@ -18,8 +18,6 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* padding-right: 0px;
-  float: left; */
 }
 
 .login_wrapper {
@@ -27,6 +25,7 @@ form {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-size: 8pt;
   border-radius: 3px;
 }
 
@@ -36,8 +35,8 @@ form {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  padding: 11.5px 23px;
-  font-size: 17pt;
+  font-size: 8pt;
+
 }
 
 /* .inputdiv {
@@ -50,8 +49,9 @@ form {
 
 } */
 #username_email_input {
-  border: 1px ridge grey;
-  font-size: 32pt;
+  border: 1px solid grey;
+  border-radius: 3px;
+  font-size: 18pt;
   text-align: center;
   padding: 0px 0px 0px 0px;
   margin: 2px;
@@ -59,9 +59,9 @@ form {
 
 
 .password_input {
-  border: 1px ridge grey;
+  border: 1px solid black;
   border-radius: 3px;
-  font-size: 24pt;
+  font-size: 16pt;
   text-align: center;
   margin: 2px;
 }

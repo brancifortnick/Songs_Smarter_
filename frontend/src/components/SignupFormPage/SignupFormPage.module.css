@@ -32,12 +32,12 @@
 }
 .submitButton {
   font-weight: bold;
-  width: 110px;
   text-align: center;
   background-color: whitesmoke;
-  border: 1px solid black;
   border-radius: 5px;
+  border: 1px solid black;
   padding: 4px;
+  width: 110px;
   font-size: 14pt;
 }
 
@@ -96,7 +96,6 @@ a.forgot {
   display: inline-flex;
   position: relative;
 }
-
 
 /* div .forgot {
   display: flex;
