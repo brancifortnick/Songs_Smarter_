@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/brancifortnick/Songs_Smarter_/issues"
   },
-  "homepage": "https://github.com/brancifortnick/Songs_Smarter_#readme"
+  "homepage": "https://github.com/brancifortnick/Songs_Smarter_#readme",
+  "dependencies": {
+    "react-player": "^2.9.0"
+  }
 }

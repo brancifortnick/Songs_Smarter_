@@ -14,17 +14,24 @@ const AllSongs = () => {
   }, [dispatch]);
 
   return (
-    <div id="songsContainer">
-      <ul className="song_list">
-        {songs.map(song => (
-          <Link to={`/song/${song?.id}`}>
-            <div id="song-id" className="song-id" key={song?.id}></div>
-            <div id="title-h3">
-             {song?.title}
-            </div>
-          </Link>
-        ))}
-      </ul>
+    <div className="outermost_div">
+      <div id="songs-container" className="songs_container">
+        <div id="hold-ptag">
+          <p id="all-song-text" className="all_song_text">
+            Hello and Welcome to the Song Page Check out some of our communities
+            recently uploaded music!
+          </p>
+        </div>
+        <ul className="song_list">
+          {songs.map((song) => (
+            <Link to={`/song/${song?.id}`}>
+              <div id="song-id" className="song-id" key={song?.id}></div>
+              <div id="title-h3">{song?.title}</div>
+            </Link>
+          ))}
+        </ul>
+        <div className="additional_div">{"hello"}</div>
+      </div>
     </div>
   );
 };
