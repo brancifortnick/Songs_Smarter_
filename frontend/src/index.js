@@ -9,6 +9,7 @@ import configureStore from "./store";
 import * as sessionActions from "./store/session";
 import * as commentActions from './store/comment';
 import * as songActions from './store/song'
+import * as usersActions from './store/users'
 const store = configureStore();
 
 if (process.env.NODE_ENV !== "production") {
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV !== "production") {
   window.sessionActions = sessionActions;
   window.commentActions = commentActions;
   window.songActions =  songActions;
+  window.usersActions = usersActions;
 }
 
 const Root = () => (

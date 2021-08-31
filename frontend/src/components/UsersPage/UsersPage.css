@@ -1,0 +1,23 @@
+/* .tableContainer {
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: subgrid;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border: thin solid black;
+  padding: 0.2px;
+  border-radius: 0.25rem;
+}
+
+.thead th {
+  border-bottom: thin solid black;
+  padding: 0.35rem;
+}
+
+.tbody td {
+  padding: 0.35rem;
+} */

@@ -1,4 +1,4 @@
-/* .tableContainer {
+.tableContainer {
   width: 75%;
   margin: auto;
   display: grid;
@@ -20,4 +20,4 @@
 
 .tbody td {
   padding: 0.35rem;
-} */
+}

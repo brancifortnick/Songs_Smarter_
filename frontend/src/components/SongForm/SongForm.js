@@ -25,23 +25,17 @@ const SongForm = () => {
     <div className={styles.formContainer}>
       <form onSubmit={submitForm} className={styles.formContainer}>
         <div className={styles.formInputWrapper}>
-          {/* <label>Artist</label>
-          <input
-            name="artist"
-            type="text"
-            value={artist}
-            onChange={(e) => setArtist(e.target.value)}
-          /> */}
-          <div id="song_form_outterdiv">
+          <h1 className={styles.uploadtext}>| Upload Here |</h1>
             <input
+              className={styles.linkinput}
               name="url"
-              placeholder="ie: https://soundcloud.com/.."
+              placeholder="Link..."
               type="text"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
             />
-
             <input
+              className={styles.titleinput}
               name="title"
               type="text"
               placeholder="Title..."
@@ -49,7 +43,6 @@ const SongForm = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
-        </div>
         <button
           placeholder=""
           className={styles.button}
