@@ -15,9 +15,9 @@ const AllSongs = () => {
 
   return (
     <div className="outermost_div">
-      <div id="songs-container" className="songs_container">
+      <div  className="songs_container">
         <div id="hold-ptag">
-          <p id="all-song-text" className="all_song_text">
+          <p className="p_text">
             Hello and Welcome to the Song Page Check out some of our communities
             recently uploaded music!
           </p>
@@ -26,7 +26,7 @@ const AllSongs = () => {
           {songs.map((song) => (
             <Link to={`/song/${song?.id}`}>
               <div id="song-id" className="song-id" key={song?.id}></div>
-              <div id="title-h3">{song?.title}</div>
+              <div className='all_songs' type='text'>{song?.title}</div>
             </Link>
           ))}
         </ul>
