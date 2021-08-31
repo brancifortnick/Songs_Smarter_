@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, useStore } from "react-redux";
 import AllComments from "../AllComments";
 import { getOneSong } from "../../store/song";
 import DeleteSong from "../DeleteSong";
@@ -9,7 +9,7 @@ import "./SingleSong.css";
 import DeleteComment from "../CommentDelete";
 import SongForm from "../SongForm/SongForm";
 //! import edit update and delete components//
-
+import {getUsers} from '../../store/users';
 const SingleSong = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -23,6 +23,9 @@ const SingleSong = () => {
     dispatch(getOneSong(Number(id)));
   }, [dispatch]);
 
+  useEffect(()=> {
+    dispatch(getUsers());
+  },[dispatch])
   return (
     <div className="audio_outter_div">
       <div id="single-song">
