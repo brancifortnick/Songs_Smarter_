@@ -1,4 +1,7 @@
-.audio-photo {
+.audio_outter_div {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0.7em grey;
   background-image: url(../../assets/philly2.jpg);
   background-size: cover;
   background-attachment: fixed;

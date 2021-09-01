@@ -11,9 +11,10 @@ div.nav-bar {
 }
 
 .profile-dropdown {
-  background-color: rgb(32, 26, 26);
-  width: 150px;
-  height: 35px;
+  display: flex;
+  flex-flow: column;
+  align-content: left;
+  justify-content: space-evenly;
 }
 div.nav-link {
   text-decoration: none;

@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/brancifortnick/Songs_Smarter_#readme",
   "dependencies": {
+    "react-hook-form": "^7.14.2",
     "react-player": "^2.9.0"
   }
 }
