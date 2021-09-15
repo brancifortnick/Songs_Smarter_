@@ -6,9 +6,11 @@ import { editComment } from "../../store/comment";
 const CommentEdit = ({ id }) => {
   const dispatch = useDispatch();
   // let { id } = useParams()
-  // const userId = useSelector(state=> state.session?.user)
+  // const userId = useSelector((state)=> state.session?.user)
   const [edit, setEdit] = useState(false);
   const [comment, setComment] = useState("");
+
+
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(editComment(Number(id)));

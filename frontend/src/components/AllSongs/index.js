@@ -27,12 +27,14 @@ const AllSongs = () => {
             <Link to={`/song/${song?.id}`}>
               <div id="song-id" className="song-id" key={song?.id}></div>
               <div className='all_songs' type='text'>{song?.title}</div>
+
             </Link>
           ))}
         </ul>
         {/* <div className="additional_div">{"hello"}</div> */}
       </div>
     </div>
+
   );
 };
 

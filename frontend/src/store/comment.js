@@ -37,7 +37,7 @@ const remove = (id) => ({
 //*            thunks            *//
 //*        get the comments      *//
 
-export const getComments = (comment) => async (dispatch) => {
+export const getComments = () => async (dispatch) => {
   const res = await csrfFetch("/api/comment/all", {
     method: "GET",
     headers: {
@@ -75,7 +75,7 @@ export const editComment = (commentId, comment) => async (dispatch) => {
   console.log(commentId, "_________commentId________");
   const data = JSON.stringify({
     commentId,
-    comment,
+    comment, //comment should be body?
   });
   const res = await csrfFetch(`/api/comment/${commentId}`, {
     method: "PUT",

@@ -1,6 +1,6 @@
 .outermost_div {
   background: linear-gradient(to right, transparent, mistyrose),
-    url("../../assets/christopher-campbell-D__LjGrJrTU-unsplash.jpg");
+  url("../../assets/christopher-campbell-D__LjGrJrTU-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -12,10 +12,6 @@ ul.song_list {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid whitesmoke;
-  border-radius: 3px;
-  color: whitesmoke;
-
 }
 
 div.all_songs {
@@ -23,6 +19,7 @@ div.all_songs {
   border-radius: 3px;
   font-size: 18pt;
   text-decoration: none;
+  color: #ad4ca0;
 }
 .songs_container {
 
@@ -43,7 +40,6 @@ div.all_songs {
   justify-content: center;
   color: black;
   font-weight: bold;
-  border: 1.5px solid rgba(102, 108, 110, 0.897);
   border-radius: 3px;
   padding: 8px;
   box-sizing: border-box;
@@ -62,9 +58,9 @@ div.all_songs {
 }
 
 .song_list:hover {
-  border: 1px solid lightslategray;
+  /* border: 1px solid lightslategray;
   box-sizing: border-box;
-  box-shadow: -5px -5px 10px 8px lightgrey;
+  box-shadow: -5px -5px 10px 8px lightgrey; */
 }
 
 /*

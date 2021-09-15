@@ -9,12 +9,11 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: white;
+
 }
 .comment_body {
   width: 100%;
-  background-color: whitesmoke;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   border-radius: 3px;
   padding: 4px;
   color: #ad4ca0;
@@ -55,7 +54,7 @@ h2 {
   border-radius: 3px;
 }
 .delete-comment{
-  padding: 2px;
+  /* padding: 2px; */
   margin: 0px;
   border-radius: 4px;
   font-weight: bold;
@@ -85,6 +84,11 @@ h2 {
   font-weight: bold;
 }
 
+.delete-comment{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+}
 
 .comment_submit{
   padding: 3px;
