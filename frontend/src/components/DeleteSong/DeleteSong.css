@@ -1,10 +1,12 @@
-.delete_button {
+button.delete_button {
+  padding: 2px 10px 10px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: white;
   color: black;
   cursor: pointer;
+  /* margin: 2px; */
 }
 
 .delete_button:hover {

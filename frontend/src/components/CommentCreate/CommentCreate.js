@@ -39,8 +39,9 @@ const CommentCreate = () => {
   return (
     <div>
       <form className="comment_create_container" onSubmit={onSubmit}>
-        <textarea
-          type="textarea"
+        <input
+          className='comment-input'
+          type="text"
           placeholder="Comment here..."
           value={body}
           onChange={updateBody}

@@ -8,23 +8,24 @@ h2 {
 .form-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
 
 }
-.comment_body {
-  width: 100%;
-  border: 2px solid whitesmoke;
-  border-radius: 3px;
-  padding: 4px;
-  color: #ad4ca0;
+   /* display: flex; */
+  /* flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline; */
+div.comment_body {
+  padding: 4px 4px;
+  color: whitesmoke;
+  font-weight: bolder;
+  border: 1px solid red;
 }
-/*
+
 .all_comments {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-} */
+  padding: 2px 2px 2px 2px;
+  margin: 4px;
+}
 
 /* #comment_text {
   display: flex;
@@ -36,24 +37,26 @@ h2 {
   font-size: 16pt;
   font-weight: bold; }*/
 
-
+ol#comment_text {
+  padding: 0px 0px 0px 0px;
+}
 
 .delete-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.delete_button{
+.delete_button {
   padding: 2px;
   margin: 0px;
   border-radius: 4px;
   font-weight: bold;
 }
-.single_song_button{
+.single_song_button {
   padding: 6px;
   border-radius: 3px;
 }
-.delete-comment{
+.delete-comment {
   /* padding: 2px; */
   margin: 0px;
   border-radius: 4px;
@@ -65,32 +68,32 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
 } */
-.edit_button{
+.edit_button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-weight: bold;
 }
-.edit-form{
+.edit-form {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.single_song_button{
+.single_song_button {
   padding: 6px;
   margin: 2px;
   border-radius: 4px;
   font-weight: bold;
 }
 
-.delete-comment{
+.delete-comment {
   display: flex;
-  flex-direction:row;
-  align-items:center;
+  flex-direction: row;
+  align-items: center;
 }
 
-.comment_submit{
+.comment_submit {
   padding: 3px;
   margin: 3px;
   border-radius: 4px;

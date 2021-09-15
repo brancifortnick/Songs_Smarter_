@@ -6,7 +6,7 @@ import { csrfFetch } from "./csrf";
 //*initial state//
 
 //*         Constants           *//
-
+// const GET_ONE_COMMENT = "comment/GET_ONE_COMMENT"
 const GET_COMMENT = "comment/GET_COMMENT";
 const CREATE_COMMENT = "comment/CREATE_COMMENT";
 const EDIT_COMMENT = "comment/EDIT_COMMENT";
@@ -24,9 +24,9 @@ const create = (comment) => ({
   payload: comment,
 });
 
-const edit = (comment) => ({
+const edit = (commentId) => ({
   type: EDIT_COMMENT,
-  payload: comment,
+  payload: commentId,
 });
 
 const remove = (id) => ({
@@ -71,13 +71,11 @@ export const createComment = (comment) => async (dispatch) => {
 
 // //*         edit              *//
 
-export const editComment = (commentId, comment) => async (dispatch) => {
-  console.log(commentId, "_________commentId________");
+export const editComment = (commentId) => async (dispatch) => {
   const data = JSON.stringify({
     commentId,
-    comment, //comment should be body?
   });
-  const res = await csrfFetch(`/api/comment/${commentId}`, {
+  const res = await csrfFetch(`/api/comment/${commentId.id}`, {
     method: "PUT",
     body: data,
     headers: {

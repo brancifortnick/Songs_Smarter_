@@ -1,8 +1,10 @@
-/* .comment_create_container {
-    display: flex;
-    flex-direction: row;
+form.comment_create_container {
+    /* padding: 30px 30px 30px 30px; */
+    /* display: flex;
+    flex-direction: row; */
     justify-content: space-between;
-    align-items: left; */
+    align-items: left;
+}
 #comment{
     display: flex;
     flex-direction: row;
@@ -13,4 +15,9 @@ div.create_comment {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+input.comment-input {
+    /* display: flex; */
+
 }

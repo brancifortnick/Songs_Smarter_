@@ -18,7 +18,8 @@ const AllSongs = () => {
       <div  className="songs_container">
         <div id="hold-ptag">
           <p className="p_text">
-            Hello and Welcome to the Song Page Check out some of our communities
+            Hello and Welcome to the Song Page!
+            Check out some of our communities
             recently uploaded music!
           </p>
         </div>

@@ -13,7 +13,7 @@
 /* h1.div_wrapper {
 
 } */
-form {
+form.login-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

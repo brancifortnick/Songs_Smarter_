@@ -12,6 +12,7 @@ ul.song_list {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  color: #ad4ca0;
 }
 
 div.all_songs {

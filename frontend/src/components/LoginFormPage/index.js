@@ -27,7 +27,7 @@ const LoginFormPage = () => {
   return (
     <div className="formContainer">
     <h1 id="div_wrapper" type='text'>Login Here</h1>
-      <form onSubmit={handleSubmit}>
+      <form className='login-form' onSubmit={handleSubmit}>
         <ul className='errors_login'>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
