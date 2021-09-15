@@ -16,29 +16,39 @@ const CommentEdit = ({ id }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
     const commentPayload = {
       id,
       userId,
       // songId,
       // body,
     };
+    console.log(commentPayload)
     await dispatch(editComment(commentPayload));
+    setEdit(true);
     history.push(`/song/${id}`);
   };
 
   return (
     <div className="edit_button">
-      {/* <button type="submit" name="button-edit" onClick={() => setEdit(!edit)}>
+      <button type="button" name="button-edit" onClick={() => setEdit(!edit)}>
         edit here
-      </button> */}
+      </button>
       <form onSubmit={onSubmit} className="edit-form">
-        {/* <input
-          className="comment_input"
-          type="text"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          placeholder="Comment here..."
-        ></input> */}
+        {edit ? (
+          <div>
+            <input
+              className="comment_input"
+              type="text"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              placeholder="Comment here..."
+            ></input>
+            <button type="submit" className="save_button">Save</button>
+          </div>
+        ) : (
+          <p> {""} </p>
+        )}
       </form>
     </div>
   );
