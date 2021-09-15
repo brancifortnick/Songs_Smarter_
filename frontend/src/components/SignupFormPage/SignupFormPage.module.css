@@ -1,21 +1,18 @@
 .formContainer {
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   padding-bottom: 50px;
   content: 100px;
   top: 50px;
   left: 50px;
 }
-
-/*
- [this was originally in the formContainer above]
- display: flex;
+form {
+  display: flex;
   flex-direction: column;
-  justify-content: space-evenly; */
-/* position: absolute;
-  max-width: 450px;
-  max-height: 750px;
-  [this was originally in the formContainer above]
-  */
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 .inputdiv {
   height: 35px;
