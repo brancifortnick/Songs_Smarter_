@@ -30,7 +30,7 @@ const AllSongs = () => {
             </Link>
           ))}
         </ul>
-        <div className="additional_div">{"hello"}</div>
+        {/* <div className="additional_div">{"hello"}</div> */}
       </div>
     </div>
   );

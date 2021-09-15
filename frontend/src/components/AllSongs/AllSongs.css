@@ -58,9 +58,7 @@ div.all_songs {
   padding: 50px 0px 50px 0px;
 }
 #hold-ptag:hover {
-  border: 1px solid lightslategray;
-  box-sizing: border-box;
-  box-shadow: -5px -5px 10px 8px lightgrey;
+
 }
 
 .song_list:hover {
