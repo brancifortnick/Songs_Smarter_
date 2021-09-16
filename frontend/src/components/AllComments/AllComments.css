@@ -4,28 +4,40 @@ h2 {
   align-items: center;
   color: #ad4ca0;
 }
-
-.form-container {
+.comment-text-div{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  align-content: center;
+}
 
+.form-container  {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
    /* display: flex; */
   /* flex-direction: row;
     justify-content: space-evenly;
     align-items: baseline; */
 div.comment_body {
-  padding: 4px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   color: whitesmoke;
   font-weight: bolder;
-  border: 1px solid red;
 }
-
-.all_comments {
-  padding: 2px 2px 2px 2px;
-  margin: 4px;
+.comment_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
 }
+/* .all_comments {
+  /* padding: 8px 2px 2px 2px; */
+  /* margin: 4px;
+} */
 
 /* #comment_text {
   display: flex;

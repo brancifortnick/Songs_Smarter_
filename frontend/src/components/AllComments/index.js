@@ -13,24 +13,24 @@ const AllComments = () => {
   useEffect(() => {
     dispatch(getComments());
   }, [dispatch]);
-
+  let count = 0;
   return (
     <div>
       <form className="form-container">
         <div className="all_comments">
-          <ol id="comment_text">
+          <div id="comment_text">
             {comments.map((comment) => (
-              <div className="comment_body" key={comment?.id}>
-                {comment?.body}
+              <div type='text' className="comment_body" key={comment?.id}>
+               <div className='comment-text-div' type='text'>{comment?.songId + ")."} {comment?.body}</div>
                 <div className="comment_id">
-                  <CommentEdit id={comment?.id} />
+                  <CommentEdit CommentId={comment} />
                 </div>
                 <div className="delete_button">
                   <DeleteComment commentId={comment?.id} />
                 </div>
               </div>
             ))}
-          </ol>
+          </div>
         </div>
       </form>
     </div>

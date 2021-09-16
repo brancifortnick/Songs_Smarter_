@@ -1,9 +1,7 @@
-form.comment_create_container {
-    /* padding: 30px 30px 30px 30px; */
-    /* display: flex;
-    flex-direction: row; */
-    justify-content: space-between;
-    align-items: left;
+.comment_create_container {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
 }
 #comment{
     display: flex;
