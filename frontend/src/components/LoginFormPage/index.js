@@ -26,9 +26,12 @@ const LoginFormPage = () => {
 
   return (
     <div className="formContainer">
-    <h1 id="div_wrapper" type='text'>Login Here</h1>
-      <form className='login-form' onSubmit={handleSubmit}>
-        <ul className='errors_login'>
+      <h1 id="div_wrapper" type="text">
+        {" "}
+        | Login Here |
+      </h1>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <ul className="errors_login">
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}
@@ -47,7 +50,7 @@ const LoginFormPage = () => {
 
         <div className="div_wrapper">
           <input
-            id='password_input'
+            id="password_input"
             className="password_input"
             type="password"
             value={password}
@@ -56,7 +59,7 @@ const LoginFormPage = () => {
             required
           />
         </div>
-        <button id="login_button" type="submit" className='login_wrapper'>
+        <button id="login_button" type="submit" className="login_wrapper">
           Sign In
         </button>
       </form>
