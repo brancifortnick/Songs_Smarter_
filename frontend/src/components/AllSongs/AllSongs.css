@@ -34,17 +34,21 @@ div.all_songs {
   border: 1px solid red;
   color: whitesmoke;
 }
+.text-break {
 
+}
 .p_text {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-flow: row;
+  justify-content: space-around;
+  align-content: center;
   color: black;
   font-weight: bold;
   border-radius: 3px;
   padding: 8px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 2px 0.8em lightgrey;
+  font-size: 15pt;
+  /* box-shadow: 2px 2px 2px 0.8em lightgrey; */
 }
 #hold-ptag {
   display: flex;
