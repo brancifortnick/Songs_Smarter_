@@ -10,6 +10,8 @@ h2 {
   justify-content: space-evenly;
   align-content: center;
   background-color: #ad4ca0;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
 }
 
 
@@ -67,6 +69,10 @@ ol#comment_text {
 
 }
 
+div.create_comment {
+  display: flex;
+  padding: 20px;
+}
 div.edit_button {
   display: flex;
   flex-direction: row;
@@ -74,7 +80,7 @@ div.edit_button {
   align-items: center;
   font-weight: bold;
   margin: 2px;
-  border-radius: 4px;
+  border-radius: 2px;
   font-weight: bold;
 }
 .edit-form {
@@ -92,6 +98,7 @@ div.edit_button {
 .delete-comment {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 
