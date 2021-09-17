@@ -13,14 +13,12 @@ h2 {
   border: 1px solid whitesmoke;
   border-radius: 7px;
 }
-
 .form-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 50px 0px;
 }
-
 div.comment_body {
   display: flex;
   flex-direction: column;
@@ -34,11 +32,9 @@ div.comment_body {
   justify-content: start;
   align-content: center;
 }
-
 ol#comment_text {
   padding: 0px 0px 0px 0px;
 }
-
 .delete-wrapper {
   display: flex;
   flex-direction: row;
@@ -61,7 +57,6 @@ ol#comment_text {
   align-items: center;
   margin: 2px;
 }
-
 div.create_comment {
   display: flex;
   padding: 20px;
@@ -86,14 +81,12 @@ div.edit_button {
   border-radius: 4px;
   font-weight: bold;
 }
-
 .delete-comment {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-
 .comment_submit {
   padding: 3px;
   margin: 3px;
