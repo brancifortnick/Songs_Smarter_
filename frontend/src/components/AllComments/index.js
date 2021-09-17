@@ -21,7 +21,7 @@ const AllComments = () => {
           <div id="comment_text">
             {comments.map((comment) => (
               <div type='text' className="comment_body" key={comment?.id}>
-               <div className='comment-text-div' type='text'>{comment?.songId + ")."} {comment?.body}</div>
+               <div className='comment-text-div' type='text'>{comment?.body}</div>
                 <div className="comment_id">
                   <CommentEdit CommentId={comment} />
                 </div>
