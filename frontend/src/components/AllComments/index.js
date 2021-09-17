@@ -4,7 +4,7 @@ import { getComments } from "../../store/comment";
 import DeleteComment from "../CommentDelete";
 import CommentEdit from "../CommentEdit";
 import "./AllComments.css";
-import SingleSong from "../SingleSong/index";
+
 
 const AllComments = () => {
   const dispatch = useDispatch();
