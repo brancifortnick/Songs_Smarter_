@@ -27,15 +27,13 @@
  * CSS
 
  ### Key Features
-   * the authenticated user can create a customized collection of the 'Stems' they have purchased or have added to their  'wish list'. 
-   * ability to write a comment under song snippet, and read other users comments.
-   * ability to edit own comment, delete owm comment.
-  
+   * the authenticated user can upload a customized collection songs they have created.
+   * the user will have the ability to write a comment under each song snippet, and read other users comments.
+   * the user has the ability to add and delete comments.
+
 
 # Developers
 
  **Nicholas Brancifort**
- 
+
   * https://github.com/brancifortnick
-
-

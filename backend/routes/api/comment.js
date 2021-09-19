@@ -13,9 +13,6 @@ router.get(
   "/all",
   asyncHandler(async (req, res) => {
     const comments = await Comment.findAll();
-    console.log({
-      ...comments
-    })
     return res.json(comments);
   })
 );
@@ -39,7 +36,6 @@ router.put(
   "/:id",
   requireAuth,
   asyncHandler(async (req, res) => {
-    const commentId = req.params.id;
     const { body } = req.body;
 
     const updateComment = await Comment.findByPk(commentId);

@@ -35,7 +35,7 @@ const SingleSong = () => {
       <div id="single-song">
         <h2 className="song-title">{song?.title}</h2>
         <button className="single_song_button" onClick={openInNewTab}>
-          Listen here...
+          Listen
         </button>
         <DeleteSong />
       </div>

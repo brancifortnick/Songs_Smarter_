@@ -75,7 +75,7 @@ export const editComment = (commentId) => async (dispatch) => {
   const data = JSON.stringify({
     commentId,
   });
-  const res = await csrfFetch(`/api/comment/${commentId.id}`, {
+  const res = await csrfFetch(`/api/comment/${commentId}`, {
     method: "PUT",
     body: data,
     headers: {

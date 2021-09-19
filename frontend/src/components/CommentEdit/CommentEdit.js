@@ -3,10 +3,10 @@ import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { editComment } from "../../store/comment";
 
-const CommentEdit = ({ id }) => {
+const CommentEdit = ({commentId}) => {
   const history = useHistory();
   const dispatch = useDispatch();
-  // let { id } = useParams();
+  let { id } = useParams();
   const userId = useSelector((state) => state.session.user?.id);
   // const songId = useSelector((state) => Object.values(state.comment?.songId));
   // const body = useSelector((state) => Object.values(state.comment?.body));
@@ -18,12 +18,12 @@ const CommentEdit = ({ id }) => {
     e.preventDefault();
 
     const commentPayload = {
-      id,
+    commentId,
       userId,
       // songId,
       // body,
     };
-    console.log(commentPayload)
+    console.log(commentPayload, "THIS IS THE COMMENT PAYLOAD FROM THE COMMENT EDIT COMPONENT")
     await dispatch(editComment(commentPayload));
     setEdit(true);
     history.push(`/song/${id}`);
@@ -32,7 +32,7 @@ const CommentEdit = ({ id }) => {
   return (
     <div className="edit_button">
       <button type="button" name="button-edit" onClick={() => setEdit(!edit)}>
-        edit here
+        Edit
       </button>
       <form onSubmit={onSubmit} className="edit-form">
         {edit ? (
@@ -42,9 +42,9 @@ const CommentEdit = ({ id }) => {
               type="text"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              placeholder="Comment here..."
+              placeholder='Edit'
             ></input>
-            <button type="submit" className="save_button">Save</button>
+            <button type="submit" className="save_button" >Save</button> //!fix this stufff
           </div>
         ) : (
           <p> {""} </p>

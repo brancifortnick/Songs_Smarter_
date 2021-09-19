@@ -19,13 +19,15 @@ const DeleteComment = ({commentId}) => {
     }
 
     return (
-      <form className="deleteFormContainer">
-        <div className="delete-wrapper">
-          <button className="delete-comment" onClick={deleteEvent}>
-            Delete
-          </button>
-        </div>
-      </form>
+      <div>
+        <form className="deleteFormContainer">
+          <div className="delete-wrapper">
+            <button className="delete-comment" onClick={deleteEvent}>
+              Delete
+            </button>
+          </div>
+        </form>
+      </div>
     );
 }
 
