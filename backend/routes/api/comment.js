@@ -5,10 +5,7 @@ const asyncHandler = require("express-async-handler");
 const { Song, Comment, User } = require("../../db/models");
 
 
-//*route location???????
 
-
-//???       ROUTE FIX    ????
 router.get(
   "/all",
   asyncHandler(async (req, res) => {
@@ -39,7 +36,7 @@ router.put(
     const { body } = req.body;
 
     const updateComment = await Comment.findByPk(commentId);
-    console.log("______did we make it here _________");
+    // console.log("______did we make it here _________");
 
     updateComment.update({
       body,
