@@ -9,7 +9,7 @@
   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation)
 
 ### Database Schema
-  * ![Schema](https://user-images.githubusercontent.com/65651149/123181426-47675980-d45b-11eb-801f-b4a7970388f4.png)
+  ![Schema](https://user-images.githubusercontent.com/65651149/123181426-47675980-d45b-11eb-801f-b4a7970388f4.png)
 
 
  ### Technologies Used
