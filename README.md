@@ -24,10 +24,10 @@
  * CSS
 
  ### Key Features
-   * the authenticated user can upload a customized collection songs they have created.
+   * the authenticated user can upload original music / songs they have created.
    * the user will have the ability to write a comment under each song snippet, and read other users comments.
    * the user has the ability to add and delete comments.
-
+   
 
 # Developers
 
