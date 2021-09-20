@@ -6,7 +6,6 @@ import { getUsers } from "../../store/users";
 import styles from "./UsersContainer.module.css";
 import UserRow from "../UserRow";
 import usersReducer from "../../store/users";
-
 const UsersContainer = ({User}) => {
   // Declare variables from hooks
   const dispatch = useDispatch();
