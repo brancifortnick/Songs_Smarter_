@@ -5,15 +5,10 @@ import AllComments from "../AllComments";
 import { getOneSong } from "../../store/song";
 import DeleteSong from "../DeleteSong";
 import CommentCreate from "../CommentCreate/CommentCreate";
+import { getUsers } from "../../store/users";
 import "./SingleSong.css";
-import DeleteComment from "../CommentDelete";
-import SongForm from "../SongForm/SongForm";
-//! import edit update and delete components//
 
 
-
-
-import {getUsers} from '../../store/users';
 const SingleSong = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
