@@ -1,7 +1,9 @@
-
 .user_name {
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 18px;
-  color: black;
+  color:hotpink;
   font-family: "Courier New", Courier, monospace;
 }

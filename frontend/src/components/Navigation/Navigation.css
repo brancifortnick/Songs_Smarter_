@@ -37,7 +37,8 @@ div.nav-link {
 
 .logout_button {
   display: flex;
-  float: left;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 a,
