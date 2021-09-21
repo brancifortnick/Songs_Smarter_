@@ -19,12 +19,12 @@ const SingleSong = () => {
     if (newWindow) newWindow.opener = null;
   };
   useEffect(() => {
-    dispatch(getOneSong(Number(id)));
+    dispatch(getOneSong());
   }, [dispatch]);
 
-  useEffect(()=> {
-    dispatch(getUsers());
-  },[dispatch])
+  // useEffect(()=> {
+  //   dispatch(getUsers());
+  // },[dispatch])
   return (
     <div className="audio_outter_div">
       <div id="single-song">
@@ -32,7 +32,7 @@ const SingleSong = () => {
         <button className="single_song_button" onClick={openInNewTab}>
           Listen
         </button>
-        <DeleteSong />
+        {/* <DeleteSong /> */}
       </div>
 
       <div className='create_comment'>
