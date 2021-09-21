@@ -14,7 +14,8 @@ const CommentCreate = () => {
 
   const [body, setBody] = useState("");
   const updateBody = (e) => setBody(e.target.value);
-  let songId =
+  let songId = id;
+
   useEffect(() => {
     dispatch(getComments(Number(id)));
   }, [dispatch]);
@@ -29,7 +30,7 @@ const CommentCreate = () => {
     const newComment = await dispatch(createComment(comment));
 
     if (newComment) {
-      // console.log(newComment, "new_comment>>>>>>>>>>>><<<<<<<<<<<<<<<<>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<")
+      console.log(newComment, "new_comment>>>>>>>>>>>><<<<<<<<<<<<<<<<>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<")
       dispatch(getComments());
       history.push(`/song/${id}`);
     }
