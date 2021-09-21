@@ -32,7 +32,7 @@ const SingleSong = () => {
         <button className="single_song_button" onClick={openInNewTab}>
           Listen
         </button>
-        <DeleteSong />
+        {/* <DeleteSong /> */}
       </div>
 
       <div className='create_comment'>

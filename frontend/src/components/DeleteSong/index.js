@@ -18,7 +18,7 @@ const DeleteSong = () => {
       <button
         className="delete_button"
         onClick={deleteEvent}
-        // disabled={!!false}
+        disabled={!!false}
       >
         Remove Song
       </button>

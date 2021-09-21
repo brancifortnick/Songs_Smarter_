@@ -7,7 +7,6 @@ const AllSongs = () => {
   const dispatch = useDispatch();
   const songs = useSelector((state) => Object.values(state.song));
 
-  let count = 0;
 
   useEffect(() => {
     dispatch(getAllSongs());
