@@ -8,7 +8,7 @@ import './CommentCreate.css'
 const CommentCreate = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-  const userId = useSelector((state) => state.session.user?.id);
+  const userId = useSelector(state => state.session.user?.id);
   //   const comments = useSelector(state=> state.comments);
   const { id } = useParams();
 
