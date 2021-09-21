@@ -22,9 +22,9 @@ const SingleSong = () => {
     dispatch(getOneSong(Number(id)));
   }, [dispatch]);
 
-  useEffect(()=> {
-    dispatch(getUsers());
-  },[dispatch])
+  // useEffect(()=> {
+  //   dispatch(getUsers());
+  // },[dispatch])
   return (
     <div className="audio_outter_div">
       <div id="single-song">

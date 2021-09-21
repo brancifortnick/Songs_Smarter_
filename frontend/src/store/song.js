@@ -95,17 +95,15 @@ export const createSong = (song) => async (dispatch) => {
 //     }
 //   };
 
-export const deleteSong =
-  ({ id }) =>
-  async (dispatch) => {
+export const deleteSong = (id) => async (dispatch) => {
     const res = await csrfFetch(`/api/songs/delete/${id}`, {
       method: "DELETE",
+      body: JSON.stringify({ id }),
     });
     if (res.ok) {
-      const song = await res.json();
-      dispatch(removeSong(song));
+      dispatch(removeSong(id));
     }
-  };
+};
 
 //*            initialState               *//
 
