@@ -3,11 +3,11 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./AllSongs.css";
+
+
 const AllSongs = () => {
   const dispatch = useDispatch();
   const songs = useSelector((state) => Object.values(state.song));
-
-
   useEffect(() => {
     dispatch(getAllSongs());
   }, [dispatch]);
@@ -17,7 +17,7 @@ const AllSongs = () => {
       <div className="songs_container">
         <div id="hold-ptag">
           <p className="p_text">
-            Check out some of our communtites most recently uploaded music.
+            Check out some of our communities most recently uploaded music.
             <br />
           </p>
         </div>

@@ -18,7 +18,7 @@ const SongForm = () => {
     e.preventDefault();
     const song = { userId, title, url };
     dispatch(createSong(song));
-    history.push(`/song/${userId}`);
+    history.push('/song');
   };
 
   return (
