@@ -30,7 +30,6 @@ const CommentCreate = () => {
     const newComment = await dispatch(createComment(comment));
 
     if (newComment) {
-      console.log(newComment, "new_comment>>>>>>>>>>>><<<<<<<<<<<<<<<<>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<")
       dispatch(getComments());
       history.push(`/song/${id}`);
     }
