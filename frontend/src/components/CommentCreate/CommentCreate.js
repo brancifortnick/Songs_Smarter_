@@ -8,13 +8,14 @@ import './CommentCreate.css'
 const CommentCreate = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-  const userId = useSelector((state) => state.session.user?.id);
+  const userId = useSelector(state => state.session.user?.id);
   //   const comments = useSelector(state=> state.comments);
   const { id } = useParams();
 
   const [body, setBody] = useState("");
   const updateBody = (e) => setBody(e.target.value);
-  let songId =
+  let songId = id;
+
   useEffect(() => {
     dispatch(getComments(Number(id)));
   }, [dispatch]);
@@ -29,7 +30,7 @@ const CommentCreate = () => {
     const newComment = await dispatch(createComment(comment));
 
     if (newComment) {
-      // console.log(newComment, "new_comment>>>>>>>>>>>><<<<<<<<<<<<<<<<>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<")
+      console.log(newComment, "new_comment>>>>>>>>>>>><<<<<<<<<<<<<<<<>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<")
       dispatch(getComments());
       history.push(`/song/${id}`);
     }
