@@ -16,7 +16,6 @@ import UserRow from "./components/UserRow";
 import UsersContainer from "./components/UsersContainer";
 import UsersPage from "./components/UsersPage/UsersPage";
 
-
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
