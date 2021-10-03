@@ -1,14 +1,13 @@
 
 # [Song Smarter](https://songs-aa.herokuapp.com)
 
-
 ### Status: In Progress...
 #### Upcoming intentions: 
-###### Overall styling polish, Cart feature where users can purchase melody stems, including priced packages focused on exclusivity and usage rights.
+###### Overall styling polish, Cart feature where users can purchase melody stems with priced packages intended for exclusivity and usage rights.
 <!-- 
   * [Features](https://github.com/brancifortnick/Songs_Smarter_/wiki/features) -->
 <!--   * [Frontend-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/Frontend-Routes) -->
-  * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation)
+<!--   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation) -->
   * [Database-schema](https://user-images.githubusercontent.com/65651149/123181426-47675980-d45b-11eb-801f-b4a7970388f4.png)
 
 
