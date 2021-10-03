@@ -1,5 +1,5 @@
 
-# [Song Smarter](https://songs-aa.herokuapp.com)
+# [Songs Smarter](https://songs-aa.herokuapp.com)
 
 ### Status: In Progress...
 #### Upcoming intentions: 
