@@ -24,7 +24,9 @@ Landing
 --------------------------| 
 [![Songs](https://i.gyazo.com/f1c1d35bda2a9620976bace4fa787583.jpg)](https://gyazo.com/f1c1d35bda2a9620976bace4fa787583)
 
-
+Upload
+--------------------------|
+[![Upload](https://i.gyazo.com/8c0846a11cc0334eaa6a2789e5666bef.jpg)](https://gyazo.com/8c0846a11cc0334eaa6a2789e5666bef)
 
  ## Technologies Used
  
@@ -38,10 +40,6 @@ Landing
  * Heroku
 
    
-
-
-
-
 ### Developer:
 
  * Nicholas Brancifort
