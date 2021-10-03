@@ -22,7 +22,7 @@ Landing
 
 Upload
 --------------------------|
-[![Upload](https://i.gyazo.com/8c0846a11cc0334eaa6a2789e5666bef.jpg)](https://gyazo.com/8c0846a11cc0334eaa6a2789e5666bef)
+[![Upload](https://i.gyazo.com/d73827f3f3a7140e4dfa62c2cefa1adc.jpg)](https://gyazo.com/d73827f3f3a7140e4dfa62c2cefa1adc)
 
 Comment, Listen
 --------------------------| 
