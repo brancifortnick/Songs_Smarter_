@@ -11,22 +11,38 @@
   * [API-Routes](https://github.com/brancifortnick/Songs_Smarter_/wiki/API-Documentation)
   * [Database-schema](https://user-images.githubusercontent.com/65651149/123181426-47675980-d45b-11eb-801f-b4a7970388f4.png)
 
- ### Technologies Used
+
+Home Page
+--------------------------| 
+[![Signup](https://i.gyazo.com/75e7c800cc7a2f08cfd265a608100c49.jpg)](https://gyazo.com/75e7c800cc7a2f08cfd265a608100c49)
+
+Login
+--------------------------| 
+[![Login](https://i.gyazo.com/e6cead100558ecbca4b1e1e058446acf.jpg)](https://gyazo.com/e6cead100558ecbca4b1e1e058446acf)
+
+Landing 
+--------------------------| 
+[![Songs](https://i.gyazo.com/f1c1d35bda2a9620976bace4fa787583.jpg)](https://gyazo.com/f1c1d35bda2a9620976bace4fa787583)
+
+
+
+ ## Technologies Used
+ 
  * JavaScript
+ * Express
+ * PostgreSQL
  * React
  * Redux
- * Express.js
+ * HTML
+ * CSS / CSS3
  * Heroku
- * HTML5
- * CSS, CSS3
 
    
 
 
 
 
-# Developer:
+### Developer:
 
- **Nicholas Brancifort**
+ * Nicholas Brancifort
 
-  * https://github.com/brancifortnick
