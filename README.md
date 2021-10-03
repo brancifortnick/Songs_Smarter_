@@ -16,10 +16,6 @@ Home Page
 --------------------------| 
 [![Signup](https://i.gyazo.com/75e7c800cc7a2f08cfd265a608100c49.jpg)](https://gyazo.com/75e7c800cc7a2f08cfd265a608100c49)
 
-Login
---------------------------| 
-[![Login](https://i.gyazo.com/e6cead100558ecbca4b1e1e058446acf.jpg)](https://gyazo.com/e6cead100558ecbca4b1e1e058446acf)
-
 Landing 
 --------------------------| 
 [![Songs](https://i.gyazo.com/f1c1d35bda2a9620976bace4fa787583.jpg)](https://gyazo.com/f1c1d35bda2a9620976bace4fa787583)
@@ -27,6 +23,10 @@ Landing
 Upload
 --------------------------|
 [![Upload](https://i.gyazo.com/8c0846a11cc0334eaa6a2789e5666bef.jpg)](https://gyazo.com/8c0846a11cc0334eaa6a2789e5666bef)
+
+Comment, Listen
+--------------------------| 
+[![Image from Gyazo](https://i.gyazo.com/b7062d4b85e7ef2dddf73e13e8e75ac6.jpg)](https://gyazo.com/b7062d4b85e7ef2dddf73e13e8e75ac6)
 
  ## Technologies Used
  
